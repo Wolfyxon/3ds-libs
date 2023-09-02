@@ -21,6 +21,8 @@ class SpriteRenderer{
         SpriteRenderer(gfxScreen_t screen);
         ~SpriteRenderer();
         static Sprite C2DSpriteToSprite(C2D_Sprite c2d_sprite, float posX=0, float posY=0, float rotation=0, float scaleX=1, float scaleY=1);
+        static C2D_Sprite getC2DSpriteFromSheetFile(char* path, size_t index);
+        static Sprite getSpriteFromSheetFile(char* path, size_t index);
         void addSprite(Sprite sprite);
         void renderSprite(Sprite sprite);
         void renderC2DSprite(C2D_Sprite sprite, float posX, float posY, float rotation, float scaleX, float scaleY);

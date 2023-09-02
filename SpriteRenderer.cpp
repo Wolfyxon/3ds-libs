@@ -21,6 +21,19 @@ Sprite SpriteRenderer::C2DSpriteToSprite(C2D_Sprite c2d_sprite, float posX, floa
     return sprite;
 }
 
+C2D_Sprite SpriteRenderer::getC2DSpriteFromSheetFile(char* path, size_t index){
+    C2D_SpriteSheet sheet = C2D_SpriteSheetLoad(path);
+    C2D_Sprite sprite;
+    C2D_SpriteFromImage(&sprite,C2D_SpriteSheetGetImage(sheet,index));
+    C2D_SpriteSheetFree(sheet);
+    return sprite;
+}
+
+Sprite SpriteRenderer::getSpriteFromSheetFile(char* path, size_t index){
+    C2D_Sprite c2d_s = getC2DSpriteFromSheetFile(path,index);
+    return C2DSpriteToSprite(c2d_s);
+}
+
 void SpriteRenderer::addSprite(Sprite sprite){
     sprites.push_back(sprite);
 }
