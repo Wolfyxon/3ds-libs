@@ -20,6 +20,7 @@ class SpriteRenderer{
 
         SpriteRenderer(gfxScreen_t screen);
         ~SpriteRenderer();
+        void addSprite(Sprite sprite);
         void renderSprite(Sprite sprite);
         void renderC2DSprite(C2D_Sprite sprite, float posX, float posY, float rotation, float scaleX, float scaleY);
         void render(bool clearScreen=true);

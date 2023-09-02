@@ -15,6 +15,10 @@ SpriteRenderer::~SpriteRenderer(){
     sprites.clear();
 }
 
+void SpriteRenderer::addSprite(Sprite sprite){
+    sprites.push_back(sprite);
+}
+
 void SpriteRenderer::renderSprite(Sprite sprite){
     renderC2DSprite(sprite.sprite,
         sprite.posX, 
@@ -41,6 +45,6 @@ void SpriteRenderer::render(bool clearScreen){
         Sprite sprite = sprites[i];
         renderSprite(sprite);
     }
-    
+
     C3D_FrameEnd(0);
 }
