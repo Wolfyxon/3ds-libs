@@ -5,6 +5,13 @@
 
 using namespace std;
 
+typedef struct {
+    C2D_Sprite sprite;
+    float posX, posY;
+    float sizeX, sizeY;
+    float rotation;
+} Sprite;
+
 class SpriteRenderer{
     public:
         SpriteRenderer();
