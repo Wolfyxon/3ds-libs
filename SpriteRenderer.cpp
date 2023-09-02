@@ -15,6 +15,11 @@ SpriteRenderer::~SpriteRenderer(){
     sprites.clear();
 }
 
+Sprite SpriteRenderer::C2DSpriteToSprite(C2D_Sprite c2d_sprite, float posX, float posY, float rotation, float scaleX, float scaleY){
+    Sprite sprite = {c2d_sprite};
+    return sprite;
+}
+
 void SpriteRenderer::addSprite(Sprite sprite){
     sprites.push_back(sprite);
 }
