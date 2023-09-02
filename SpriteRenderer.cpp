@@ -33,7 +33,7 @@ void SpriteRenderer::renderC2DSprite(C2D_Sprite sprite, float posX, float posY, 
 }
 
 void SpriteRenderer::render(){
-    for(size_t i; i<sprites.size(); i++){
+    for(size_t i=0; i<sprites.size(); i++){
         Sprite sprite = sprites[i];
         renderSprite(sprite);
     }
