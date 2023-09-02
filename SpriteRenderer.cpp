@@ -30,8 +30,8 @@ void SpriteRenderer::renderSprite(Sprite sprite){
         sprite.posX, 
         sprite.posY,
         sprite.rotation,
-        sprite.sizeX,
-        sprite.sizeY
+        sprite.scaleX,
+        sprite.scaleY
     );
 }
 
