@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<Sprite> sprites;
+vector<Sprite*> sprites;
 C3D_RenderTarget* renderTarget;
 SpriteRenderer::SpriteRenderer(gfxScreen_t screen){
     renderTarget = C2D_CreateScreenTarget(screen,GFX_LEFT);
@@ -34,26 +34,26 @@ Sprite SpriteRenderer::getSpriteFromSheetFile(char* path, size_t index){
     return C2DSpriteToSprite(c2d_s);
 }
 
-Sprite SpriteRenderer::addSprite(Sprite sprite){
+Sprite* SpriteRenderer::addSprite(Sprite* sprite){
     sprites.push_back(sprite);
     return sprite;
 }
 
-void SpriteRenderer::renderSprite(Sprite sprite){
-    renderC2DSprite(sprite.sprite,
-        sprite.posX, 
-        sprite.posY,
-        sprite.rotation,
-        sprite.scaleX,
-        sprite.scaleY
+void SpriteRenderer::renderSprite(Sprite* sprite){
+    renderC2DSprite(&sprite->sprite,
+        sprite->posX, 
+        sprite->posY,
+        sprite->rotation,
+        sprite->scaleX,
+        sprite->scaleY
     );
 }
 
-void SpriteRenderer::renderC2DSprite(C2D_Sprite sprite, float posX, float posY, float rotation, float scaleX, float scaleY){
-    C2D_SpriteSetPos(&sprite, posX, posY);
-    C2D_SpriteSetScale(&sprite, scaleX, scaleY);
-    C2D_SpriteSetRotation(&sprite,rotation);
-    C2D_DrawSprite(&sprite);
+void SpriteRenderer::renderC2DSprite(C2D_Sprite* sprite, float posX, float posY, float rotation, float scaleX, float scaleY){
+    C2D_SpriteSetPos(sprite, posX, posY);
+    C2D_SpriteSetScale(sprite, scaleX, scaleY);
+    C2D_SpriteSetRotation(sprite,rotation);
+    C2D_DrawSprite(sprite);
 }
 
 void SpriteRenderer::render(bool clearScreen){
@@ -62,7 +62,7 @@ void SpriteRenderer::render(bool clearScreen){
     C2D_SceneBegin(renderTarget);
 
     for(size_t i=0; i<sprites.size(); i++){
-        Sprite sprite = sprites[i];
+        Sprite* sprite = sprites[i];
         renderSprite(sprite);
     }
 
