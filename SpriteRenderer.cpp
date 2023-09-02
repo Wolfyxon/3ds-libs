@@ -34,8 +34,9 @@ Sprite SpriteRenderer::getSpriteFromSheetFile(char* path, size_t index){
     return C2DSpriteToSprite(c2d_s);
 }
 
-void SpriteRenderer::addSprite(Sprite sprite){
+Sprite SpriteRenderer::addSprite(Sprite sprite){
     sprites.push_back(sprite);
+    return sprite;
 }
 
 void SpriteRenderer::renderSprite(Sprite sprite){
