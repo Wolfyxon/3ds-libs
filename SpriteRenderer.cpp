@@ -10,7 +10,7 @@ SpriteRenderer::SpriteRenderer(){
     
 }
 SpriteRenderer::~SpriteRenderer(){
-
+    sprites.clear();
 }
 
 void SpriteRenderer::renderSprite(Sprite sprite){
