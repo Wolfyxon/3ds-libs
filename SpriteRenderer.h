@@ -5,8 +5,8 @@
 
 using namespace std;
 
-class ImageRenderer{
+class SpriteRenderer{
     public:
-        ImageRenderer();
-        ~ImageRenderer();
+        SpriteRenderer();
+        ~SpriteRenderer();
 };
