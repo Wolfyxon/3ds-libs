@@ -14,6 +14,8 @@ typedef struct {
 
 class SpriteRenderer{
     public:
+        vector<Sprite> sprites;
+        
         SpriteRenderer();
         ~SpriteRenderer();
 };
