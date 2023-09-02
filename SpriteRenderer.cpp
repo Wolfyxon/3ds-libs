@@ -32,9 +32,15 @@ void SpriteRenderer::renderC2DSprite(C2D_Sprite sprite, float posX, float posY, 
     C2D_DrawSprite(&sprite);
 }
 
-void SpriteRenderer::render(){
+void SpriteRenderer::render(bool clearScreen){
+    C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
+    if(clearScreen) C2D_TargetClear(renderTarget, C2D_Color32f(0.0f,0.0f,0.0f,1.0f));
+    C2D_SceneBegin(renderTarget);
+
     for(size_t i=0; i<sprites.size(); i++){
         Sprite sprite = sprites[i];
         renderSprite(sprite);
     }
+    
+    C3D_FrameEnd(0);
 }
