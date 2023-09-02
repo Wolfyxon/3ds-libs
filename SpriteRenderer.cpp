@@ -13,6 +13,16 @@ SpriteRenderer::~SpriteRenderer(){
 
 }
 
+void SpriteRenderer::renderSprite(Sprite sprite){
+    renderC2DSprite(sprite.sprite,
+        sprite.posX, 
+        sprite.posY,
+        sprite.rotation,
+        sprite.sizeX,
+        sprite.sizeY
+    );
+}
+
 void SpriteRenderer::renderC2DSprite(C2D_Sprite sprite, float posX, float posY, float rotation, float scaleX, float scaleY){
     C2D_SpriteSetPos(&sprite, posX, posY);
     C2D_SpriteSetScale(&sprite, scaleX, scaleY);
