@@ -15,7 +15,8 @@ typedef struct {
 class SpriteRenderer{
     public:
         vector<Sprite> sprites;
-        
+
         SpriteRenderer();
         ~SpriteRenderer();
+        void renderC2DSprite(C2D_Sprite sprite, float posX, float posY, float rotation, float scaleX, float scaleY);
 };
