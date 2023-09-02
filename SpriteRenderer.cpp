@@ -16,6 +16,7 @@ SpriteRenderer::~SpriteRenderer(){
 }
 
 Sprite SpriteRenderer::C2DSpriteToSprite(C2D_Sprite c2d_sprite, float posX, float posY, float rotation, float scaleX, float scaleY){
+    C2D_SpriteSetCenter(&c2d_sprite,0.5f,0.5f);
     Sprite sprite = {c2d_sprite};
     return sprite;
 }
