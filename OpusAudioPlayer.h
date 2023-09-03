@@ -7,4 +7,4 @@ public:
     ~OpusAudioPlayer();
 private:
     OggOpusFile* opusFile;
-}
+};
