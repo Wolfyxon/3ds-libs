@@ -7,27 +7,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstring>
+#include <math.h>
+
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 class OpusAudioPlayer {
 public:
     OpusAudioPlayer();
     ~OpusAudioPlayer();
 
-    bool load(const std::string& filePath);
-    void play();
-    void stop();
-    void pause();
-    void resume();
-    void setVolume(float volume);
+    bool load(char* filePath);
+    bool audioInit();
 
 private:
-    OggOpusFile* opusFile;
-    float volume;
-    bool paused;
-    bool playing;
-    ndspWaveBuf audioBuffer[16384]; // Adjust the buffer size as needed
-
-    void close();
+    void audioCallback(void *const nul_);
+    void audioThread(void *const opusFile_);
+    bool fillBuffer(OggOpusFile *opusFile_, ndspWaveBuf *waveBuf_);
+    void audioExit();
+    void audioCallback(void *const nul_);
+    void audioThread(void *const opusFile_);
 };
 
 #endif
