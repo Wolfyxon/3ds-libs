@@ -30,4 +30,4 @@ private:
     void close();
 };
 
-#endif // OPUS_AUDIO_PLAYER_H
+#endif

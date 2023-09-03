@@ -20,7 +20,7 @@ bool OpusAudioPlayer::load(const std::string& filePath) {
 }
 
 void OpusAudioPlayer::play() {
-    if (!oggFile) return; // No loaded file to play
+    if (!oggFile) return;
 
     if (paused) {
         if (playing) {
