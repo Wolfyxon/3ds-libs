@@ -1,7 +1,7 @@
 #include "OpusAudioPlayer.h"
 
 OpusAudioPlayer::OpusAudioPlayer()
-    : oggFile(nullptr), volume(1.0f), paused(false), playing(false) {
+    : opusFile(nullptr), volume(1.0f), paused(false), playing(false) {
     memset(audioBuffer, 0, sizeof(audioBuffer));
 }
 
@@ -13,14 +13,14 @@ bool OpusAudioPlayer::load(const std::string& filePath) {
     close();
 
     int error;
-    oggFile = op_open_file(filePath.c_str(), &error);
-    if (!oggFile) return false;
+    opusFile = op_open_file(filePath.c_str(), &error);
+    if (!opusFile) return false;
 
     return true;
 }
 
 void OpusAudioPlayer::play() {
-    if (!oggFile) return;
+    if (!opusFile) return;
 
     if (paused) {
         if (playing) {
@@ -35,7 +35,7 @@ void OpusAudioPlayer::play() {
         ogg_int64_t pcm_offset = 0;
         u32 totalSamples = 0;
         int samples;
-        while ((samples = op_read_stereo(oggFile, (opus_int16*)&audioBuffer, sizeof(audioBuffer) / 4)) > 0) {
+        while ((samples = op_read_stereo(opusFile, (opus_int16*)&audioBuffer, sizeof(audioBuffer) / 4)) > 0) {
             ndspChnWaveBufAdd(0, audioBuffer);
             totalSamples += samples;
             if (totalSamples >= 44100 * 5) {
@@ -75,9 +75,9 @@ void OpusAudioPlayer::setVolume(float volume) {
 }
 
 void OpusAudioPlayer::close() {
-    if (oggFile) {
-        op_free(oggFile);
-        oggFile = nullptr;
+    if (opusFile) {
+        op_free(opusFile);
+        opusFile = nullptr;
     }
     stop();
 }

@@ -21,7 +21,7 @@ public:
     void setVolume(float volume);
 
 private:
-    OggOpusFile* oggFile;
+    OggOpusFile* opusFile;
     float volume;
     bool paused;
     bool playing;
