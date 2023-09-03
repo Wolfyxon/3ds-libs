@@ -15,19 +15,9 @@ public:
 
     bool load(const std::string& filePath);
     void play();
-    void stop();
-    void pause();
-    void resume();
-    void setVolume(float volume);
 
 private:
     OggOpusFile* opusFile;
-    float volume;
-    bool paused;
-    bool playing;
-    ndspWaveBuf audioBuffer[16384]; // Adjust the buffer size as needed
-
-    void close();
 };
 
 #endif
