@@ -22,4 +22,5 @@ public:
     void setFont(ConsoleFont font);
     int getRows();
     int getColumns();
+    string getPositionPrefix(int row, int column = 0);
 };

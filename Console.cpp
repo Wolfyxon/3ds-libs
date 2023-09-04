@@ -7,10 +7,6 @@
 
 using namespace std;
 
-string getPositionPrefix(int row, int column = 0){
-    return "\x1b[" + to_string(row) + ";" + to_string(column) + "H";
-}
-
 gfxScreen_t screen;
 Console::Console(gfxScreen_t screen_){
     screen = screen_;
@@ -18,6 +14,10 @@ Console::Console(gfxScreen_t screen_){
 
 Console::~Console(){
     clear();
+}
+
+string Console::getPositionPrefix(int row, int column){
+    return "\x1b[" + to_string(row) + ";" + to_string(column) + "H";
 }
 
 void Console::print(string text){
