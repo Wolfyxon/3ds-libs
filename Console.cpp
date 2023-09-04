@@ -42,6 +42,7 @@ int Console::getRows(){
 int Console::getColumns(){
     if(screen == GFX_TOP) return 50;
     if(screen == GFX_BOTTOM) return 40;
+    return 0;
 }
 
 void Console::render(){
