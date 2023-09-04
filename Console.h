@@ -6,6 +6,25 @@
 
 using namespace std;
 
+enum Color {
+    black,
+    red,
+    green,
+    yellow,
+    blue,
+    magenta,
+    cyan,
+    white,
+};
+
+enum Ansi_code {
+    reset = 0,
+    bold = 1,
+    italic = 3,
+    underline = 4,
+    strikethrough = 9,
+};
+
 class Console
 {
 private:
@@ -13,6 +32,10 @@ private:
     PrintConsole printConsole;
 public:
     gfxScreen_t screen;
+
+    static const int FG_POS = 30;
+    static const int BG_POS = 40;
+    
 
     Console(gfxScreen_t screen_);
     ~Console();
@@ -23,4 +46,7 @@ public:
     int getRows();
     int getColumns();
     string getPositionPrefix(int row, int column = 0);
+    string getFgPrefix(Color color);
+    string getBgPrefix(Color color);
+    string getAnsiPrefix(Ansi_code type);
 };

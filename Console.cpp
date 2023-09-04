@@ -20,6 +20,18 @@ string Console::getPositionPrefix(int row, int column){
     return "\x1b[" + to_string(row) + ";" + to_string(column) + "H";
 }
 
+string Console::getFgPrefix(Color color){
+    return "\x1b["+ to_string( FG_POS+(int)color)+"m";
+}
+
+string Console::getBgPrefix(Color color){
+    return "\x1b["+ to_string( BG_POS+(int)color)+"m";
+}
+
+string Console::getAnsiPrefix(Ansi_code type){
+    return "\x1b["+ to_string(type);
+}
+
 void Console::print(string text){
     if((int)output.size() > 30){
         output.erase(output.begin());
