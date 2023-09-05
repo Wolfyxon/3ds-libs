@@ -36,7 +36,7 @@ void Console::print(string text){
     if((int)output.size() > 30){
         output.erase(output.begin());
     }
-    output.push_back(text);
+    output.push_back(text+ansi(reset));
 }
 
 void Console::clear(){
