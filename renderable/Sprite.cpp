@@ -26,7 +26,7 @@ unsigned int Sprite::getWidth(){
     return c2dSprite.image.tex->width;
 }
 
-void Sprite::setScale(unsigned int x, unsigned int y){
+void Sprite::setScale(float x, float y){
     scaleX = x;
     scaleY = y;
 }

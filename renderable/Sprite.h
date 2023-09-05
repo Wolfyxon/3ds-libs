@@ -7,8 +7,8 @@ class Sprite : Renderable {
         ~Sprite();
 
         C2D_Sprite c2dSprite;
-        unsigned int scaleX = 1;
-        unsigned int scaleY = 1;
+        float scaleX = 1;
+        float scaleY = 1;
 
         /** Returns the width in pixels. */
         unsigned int getWidth();
@@ -35,7 +35,7 @@ class Sprite : Renderable {
          * @param x Width scale percent.
          * @param y Height scale percent.
         */
-        void setScale(unsigned int x, unsigned int y);
+        void setScale(float x, float y);
         /**
          * Sets the center of the sprite.
          * @param x Center scale width.
