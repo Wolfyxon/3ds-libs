@@ -1,3 +1,5 @@
+// MARKED FOR REMOVAL
+
 #include "SpriteRenderer.h"
 #include <3ds.h>
 #include <citro2d.h>

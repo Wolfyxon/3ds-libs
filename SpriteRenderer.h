@@ -1,3 +1,5 @@
+// MARKED FOR REMOVAL
+
 #pragma once
 #include <citro2d.h>
 #include <3ds.h>
