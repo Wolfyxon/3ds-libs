@@ -16,19 +16,19 @@ Console::~Console(){
     clear();
 }
 
-string Console::posPrefix(int row, int column){
+string Console::pos(int row, int column){
     return "\x1b[" + to_string(row) + ";" + to_string(column) + "H";
 }
 
-string Console::fgPrefix(Color color){
+string Console::fg(Color color){
     return "\x1b["+ to_string( FG_POS+(int)color)+"m";
 }
 
-string Console::bgPrefix(Color color){
+string Console::bg(Color color){
     return "\x1b["+ to_string( BG_POS+(int)color)+"m";
 }
 
-string Console::ansiPrefix(Ansi_code type){
+string Console::ansi(Ansi_code type){
     return "\x1b["+ to_string(type);
 }
 
@@ -64,6 +64,6 @@ void Console::render(){
     
     for(int i = 0; i<(int)output.size(); i++){
         int topOffset = i+1;
-        cout << posPrefix(topOffset) << output[i];
+        cout << pos(topOffset) << output[i];
     }
 }
