@@ -29,7 +29,7 @@ string Console::bg(Color color){
 }
 
 string Console::ansi(Ansi_code type){
-    return "\x1b["+ to_string(type);
+    return "\x1b["+ to_string(type)+"m";
 }
 
 void Console::print(string text){
