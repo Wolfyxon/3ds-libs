@@ -39,14 +39,42 @@ public:
 
     Console(gfxScreen_t screen_);
     ~Console();
+    /** Prints line of text.
+    * @param text The text you want to print. ANSI codes are supported.
+    */
     void print(string text);
+    /** Clears the output */
     void clear();
+    /** Renders the console. Must be called in a loop. */
     void render();
+    /** 
+    * Sets the console font 
+    * @param font The font you want to use.
+    */
     void setFont(ConsoleFont font);
+    /** Returns the total character rows. */
     int getRows();
+    /** Returns the total character columns. */
     int getColumns();
+    /** 
+     * Returns an ANSI code that moves text to the specified row and column. 
+     * @param row Row from 0 to 30.
+     * @param columns Column from 0 to 50 on the top screen and 40 on the bottom.
+     */
     string pos(int row, int column = 0);
+    /** 
+    * Returns an ANSI code that sets the foreground color of text.
+    * @param color The color you want to use.
+    */
     string fg(Color color);
+    /** 
+    * Returns an ANSI code that sets the background color of text.
+    * @param color The color you want to use.
+    */
     string bg(Color color);
+    /** 
+    * Returns an ANSI code that can format text in many ways.
+    * @param type The formatting option you want to use.
+    */
     string ansi(Ansi_code type);
 };
