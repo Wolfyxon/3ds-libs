@@ -1,10 +1,12 @@
 #include "Renderable.h"
+#include <citro2d.h>
 
 class Sprite : Renderable {
     public:
         Sprite();
         ~Sprite();
 
+        C2D_Sprite c2dSprite;
         unsigned int scaleX = 1;
         unsigned int scaleY = 1;
 
@@ -29,6 +31,8 @@ class Sprite : Renderable {
         */
         unsigned int setSize(unsigned int width, unsigned int height);
 
+        bool loadFromSheet(C2D_SpriteSheet sheet, unsigned int index=0);
+        bool loadFromSheetFile(char* path, unsigned int index=0);
 
     private:
         unsigned int width = 0;
