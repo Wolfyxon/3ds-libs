@@ -31,6 +31,12 @@ class Sprite : Renderable {
         */
         unsigned int setSize(unsigned int width, unsigned int height);
         /**
+         * Set X and Y scale of the sprite at the same time.
+         * @param x Width scale percent.
+         * @param y Height scale percent.
+        */
+        void setScale(unsigned int x, unsigned int y);
+        /**
          * Loads a sprite from a sprite sheet.
          * @param sheet The sprite sheet.
          * @param index Index of the sprite in sheet.
