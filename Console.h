@@ -45,8 +45,8 @@ public:
     void setFont(ConsoleFont font);
     int getRows();
     int getColumns();
-    string getPositionPrefix(int row, int column = 0);
-    string getFgPrefix(Color color);
-    string getBgPrefix(Color color);
-    string getAnsiPrefix(Ansi_code type);
+    string posPrefix(int row, int column = 0);
+    string fgPrefix(Color color);
+    string bgPrefix(Color color);
+    string ansiPrefix(Ansi_code type);
 };
