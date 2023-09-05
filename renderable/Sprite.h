@@ -18,18 +18,18 @@ class Sprite : Renderable {
          * Calculates the X scale to match the specified pixel width
          * @param width Width in pixels.
         */
-        unsigned int setWidth(unsigned int width);
+        void setWidth(unsigned int width);
         /**
          * Calculates the Y scale to match the specified pixel height and sets it.
          * @param height Height in pixels.
         */
-        unsigned int setHeight(unsigned int height);
+        void setHeight(unsigned int height);
         /**
          * Calculates the X and Y scale from the specified pixel with and height and sets it.
          * @param width Width in pixels.
          * @param height Height in pixels.
         */
-        unsigned int setSize(unsigned int width, unsigned int height);
+        void setSize(unsigned int width, unsigned int height);
         /**
          * Set X and Y scale of the sprite at the same time.
          * @param x Width scale percent.
