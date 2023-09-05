@@ -30,3 +30,7 @@ void Sprite::setScale(unsigned int x, unsigned int y){
     scaleX = x;
     scaleY = y;
 }
+
+void Sprite::setCenter(float x, float y){
+    C2D_SpriteSetCenter(&c2dSprite,x,y);
+}

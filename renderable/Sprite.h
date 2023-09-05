@@ -37,6 +37,13 @@ class Sprite : Renderable {
         */
         void setScale(unsigned int x, unsigned int y);
         /**
+         * Sets the center of the sprite.
+         * @param x Center scale width.
+         * @param y Center scale height.
+         * 
+        */
+        void setCenter(float x=0.5, float y=0.5);
+        /**
          * Loads a sprite from a sprite sheet.
          * @param sheet The sprite sheet.
          * @param index Index of the sprite in sheet.
@@ -48,7 +55,7 @@ class Sprite : Renderable {
          * @param index Index of the sprite in sheet.
         */
         bool loadFromSheetFile(char* path, unsigned int index=0);
-            /**
+        /**
          * Loads a sprite from a C2D_Image.
          * @param image The image you want to load.
         */
