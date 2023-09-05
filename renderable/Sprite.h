@@ -33,6 +33,7 @@ class Sprite : Renderable {
 
         bool loadFromSheet(C2D_SpriteSheet sheet, unsigned int index=0);
         bool loadFromSheetFile(char* path, unsigned int index=0);
+        void loadFromImage(C2D_Image image);
 
     private:
         unsigned int width = 0;

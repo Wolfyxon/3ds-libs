@@ -13,3 +13,7 @@ bool Sprite::loadFromSheetFile(char* path, unsigned int index){
     C2D_SpriteSheetFree(sheet);
     return res;
 }
+
+void Sprite::loadFromImage(C2D_Image image){
+    C2D_SpriteFromImage(&c2dSprite,image);
+}
