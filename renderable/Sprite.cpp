@@ -17,3 +17,11 @@ bool Sprite::loadFromSheetFile(char* path, unsigned int index){
 void Sprite::loadFromImage(C2D_Image image){
     C2D_SpriteFromImage(&c2dSprite,image);
 }
+
+unsigned int Sprite::getHeight(){
+    return c2dSprite.image.tex->height;
+}
+
+unsigned int Sprite::getWidth(){
+    return c2dSprite.image.tex->width;
+}
