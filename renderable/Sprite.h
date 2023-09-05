@@ -30,9 +30,22 @@ class Sprite : Renderable {
          * @param height Height in pixels.
         */
         unsigned int setSize(unsigned int width, unsigned int height);
-
+        /**
+         * Loads a sprite from a sprite sheet.
+         * @param sheet The sprite sheet.
+         * @param index Index of the sprite in sheet.
+        */
         bool loadFromSheet(C2D_SpriteSheet sheet, unsigned int index=0);
+        /**
+         * Loads a sprite from a sprite sheet at the specified file path.
+         * @param path File path to the sprite sheet, example 'someSheet.t3x'.
+         * @param index Index of the sprite in sheet.
+        */
         bool loadFromSheetFile(char* path, unsigned int index=0);
+            /**
+         * Loads a sprite from a C2D_Image.
+         * @param image The image you want to load.
+        */
         void loadFromImage(C2D_Image image);
 
     private:
