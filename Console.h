@@ -61,20 +61,21 @@ public:
      * @param row Row from 0 to 30.
      * @param columns Column from 0 to 50 on the top screen and 40 on the bottom.
      */
-    string pos(int row, int column = 0);
+    
+    static string pos(int row, int column = 0);
     /** 
     * Returns an ANSI code that sets the foreground color of text.
     * @param color The color you want to use.
     */
-    string fg(Color color);
+    static string fg(Color color);
     /** 
     * Returns an ANSI code that sets the background color of text.
     * @param color The color you want to use.
     */
-    string bg(Color color);
+    static string bg(Color color);
     /** 
     * Returns an ANSI code that can format text in many ways.
     * @param type The formatting option you want to use.
     */
-    string ansi(Ansi_code type);
+    static string ansi(Ansi_code type);
 };
