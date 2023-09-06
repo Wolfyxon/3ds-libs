@@ -7,6 +7,10 @@ class Sprite : Renderable {
         ~Sprite();
 
         C2D_Sprite c2dSprite;
+
+        int posX = 0;
+        int posY = 0;
+
         float scaleX = 1;
         float scaleY = 1;
 
@@ -60,6 +64,11 @@ class Sprite : Renderable {
          * @param image The image you want to load.
         */
         void loadFromImage(C2D_Image image);
+        /**
+         * Renders the sprite
+         * @param screen On which screen will the sprite be rendered.
+        */
+        void render(gfxScreen_t screen);
 
     private:
         unsigned int width = 0;
