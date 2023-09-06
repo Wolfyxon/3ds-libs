@@ -27,7 +27,7 @@ class TreeElement {
         * Returns index of a child. Returns -1 if the child is not found.
         * @param child Pointer to child TreeElement.
        */
-        size_t getChildIdx(TreeElement* child);
+        int getChildIdx(TreeElement* child);
         /**
          * Adds another TreeElement as a child.
          * @param element Pointer to the TreeElement you want to add.

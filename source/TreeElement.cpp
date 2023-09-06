@@ -49,8 +49,8 @@ void TreeElement::removeChild(TreeElement* child){
     child->free();
 }
 
-size_t TreeElement::getChildIdx(TreeElement* child){
-    for(size_t i=0; i<children.size(); i++){
+int TreeElement::getChildIdx(TreeElement* child){
+    for(int i=0; i<children.size(); i++){
         if(children[i] == child) return i;
     }
     return -1;
