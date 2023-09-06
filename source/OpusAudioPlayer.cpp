@@ -1,4 +1,4 @@
-#include "OpusAudioPlayer.h"
+#include "../include/OpusAudioPlayer.h"
 
 OpusAudioPlayer::OpusAudioPlayer(int channel_) {
     channel = channel_;

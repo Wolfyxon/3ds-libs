@@ -1,4 +1,4 @@
-#include "Console.h"
+#include "../include/Console.h"
 #include <3ds.h>
 #include <stdio.h>
 #include <vector>
