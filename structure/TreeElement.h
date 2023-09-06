@@ -22,7 +22,7 @@ class TreeElement {
         */
        void removeChild(TreeElement* child);
        /**
-        * Returns index of a child.
+        * Returns index of a child. Returns -1 if the child is not found.
         * @param child Pointer to child TreeElement.
        */
         size_t getChildIdx(TreeElement* child);
