@@ -1,3 +1,4 @@
+#pragma once
 #include "Renderable.h"
 #include <citro2d.h>
 
