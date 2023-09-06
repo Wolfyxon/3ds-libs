@@ -34,3 +34,9 @@ void Sprite::setScale(float x, float y){
 void Sprite::setCenter(float x, float y){
     C2D_SpriteSetCenter(&c2dSprite,x,y);
 }
+
+void Sprite::render(gfxScreen_t screen){
+    C2D_SpriteSetPos(&c2dSprite,posX,posY);
+    C2D_SpriteScale(&c2dSprite,scaleX,scaleY);
+    C2D_DrawSprite(&c2dSprite);
+}
