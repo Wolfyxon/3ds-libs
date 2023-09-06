@@ -1,5 +1,9 @@
 #include "TreeElement.h"
 
+TreeElement::~TreeElement(){
+    free();
+}
+
 vector<TreeElement*> TreeElement::getChildren(){
     return children;
 }
@@ -42,6 +46,7 @@ void TreeElement::removeChild(TreeElement* child){
     std::advance(it, idx);
     children.erase(it);
     child->parent = NULL;
+    child->free();
 }
 
 size_t TreeElement::getChildIdx(TreeElement* child){
@@ -49,6 +54,15 @@ size_t TreeElement::getChildIdx(TreeElement* child){
         if(children[i] == child) return i;
     }
     return -1;
+}
+
+void TreeElement::free(){
+    if(parent != NULL) parent->removeChild(this);
+    for(size_t i=0; i<children.size(); i++){
+        TreeElement* ch = children[i];
+        ch->free();
+    }
+    children.clear();
 }
 
 bool TreeElement::hasChild(TreeElement* child){

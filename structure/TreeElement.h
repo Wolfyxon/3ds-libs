@@ -16,6 +16,8 @@ class TreeElement {
         vector<TreeElement*> getDescendants();
         /** Returns pointers to all ancestor TreeElements (parent, parent of parent, and so on...)*/
         vector<TreeElement*> getAncestors();
+        /** Deletes the TreeElement */
+        void free();
         /**
          * Removes a child.
          * @param child Pointer to child TreeElement.
