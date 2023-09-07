@@ -38,7 +38,7 @@ void TreeElement::addChild(TreeElement* child){
     children.push_back(child);
 }
 
-void TreeElement::removeChild(TreeElement* child){
+void TreeElement::removeChild(TreeElement* child, bool free){
     if(!hasChild(child)) return;
     size_t idx = getChildIdx(child);
     if(idx == -1) return;
@@ -46,7 +46,7 @@ void TreeElement::removeChild(TreeElement* child){
     std::advance(it, idx);
     children.erase(it);
     child->parent = NULL;
-    child->free();
+    if(free) child->free();
 }
 
 int TreeElement::getChildIdx(TreeElement* child){

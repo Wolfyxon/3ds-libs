@@ -20,8 +20,9 @@ class TreeElement {
         /**
          * Removes a child.
          * @param child Pointer to child TreeElement.
+         * @param free Should the child data be freed.
         */
-       void removeChild(TreeElement* child);
+       void removeChild(TreeElement* child, bool free = true);
        /**
         * Returns index of a child. Returns -1 if the child is not found.
         * @param child Pointer to child TreeElement.
