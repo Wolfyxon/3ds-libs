@@ -9,7 +9,6 @@ class TreeElement {
         TreeElement();
         ~TreeElement();
 
-        TreeElement* parent;
         /** Returns pointers to the children TreeElements */
         vector<TreeElement*> getChildren();
         /** Returns pointers to all descendant TreeElements (children, children of children, and so on...)*/
@@ -46,4 +45,5 @@ class TreeElement {
 
     private:
         vector<TreeElement*> children;
+        TreeElement* parent;
 };
