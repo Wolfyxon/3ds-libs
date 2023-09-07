@@ -1,5 +1,9 @@
 #include "../include/TreeElement.h"
 
+TreeElement::TreeElement(string name_){
+    name = name_;
+}
+
 TreeElement::~TreeElement(){
     free();
 }

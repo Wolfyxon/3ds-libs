@@ -7,7 +7,7 @@ using namespace std;
 
 class TreeElement {
     public:
-        TreeElement();
+        TreeElement(string name_ = NULL);
         ~TreeElement();
 
         string name;
@@ -43,7 +43,8 @@ class TreeElement {
        bool hasChild(TreeElement* child);
         /**
          * Returns pointer to the child TreeElement at the specified index. Returns NULL if the child is not found.
-         * @param index Index of the child.
+         * @param index Index of the child.t.h"
+
         */
        TreeElement* getNthChild(size_t index);
         /** Returns pointer to the parent TreeElement or NULL if this TreeElement is an orphan. */
