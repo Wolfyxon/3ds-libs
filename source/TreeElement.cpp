@@ -71,3 +71,8 @@ bool TreeElement::hasChild(TreeElement* child){
         (std::find(children.begin(), children.end(), child) != children.end()) 
     );
 }
+
+TreeElement* TreeElement::getNthChild(size_t index){
+    if(children.size()-1 < index ) return NULL;
+    return children[index];
+}

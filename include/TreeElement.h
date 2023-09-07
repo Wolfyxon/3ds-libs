@@ -38,6 +38,11 @@ class TreeElement {
          * @param child Pointer to child TreeElement.
         */
        bool hasChild(TreeElement* child);
+        /**
+         * Returns pointer to the child TreeElement at the specified index. Returns NULL if the child is not found.
+         * @param index Index of the child.
+        */
+       TreeElement* getNthChild(size_t index);
 
     private:
         vector<TreeElement*> children;
