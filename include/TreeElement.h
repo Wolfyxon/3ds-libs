@@ -44,6 +44,11 @@ class TreeElement {
        TreeElement* getNthChild(size_t index);
         /** Returns pointer to the parent TreeElement or NULL if this TreeElement is an orphan. */
        TreeElement* getParent();
+        /**
+         * Moves this TreeElement to a new parent or assigns it if this is an orphan.
+         * @param parent Pointer to the new parent TreeElement.
+        */
+       void setParent(TreeElement* parent);
     private:
         vector<TreeElement*> children;
         TreeElement* parent;

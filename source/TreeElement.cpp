@@ -80,3 +80,11 @@ TreeElement* TreeElement::getNthChild(size_t index){
 TreeElement* TreeElement::getParent(){
     return parent;
 }
+
+void TreeElement::setParent(TreeElement* newParent){
+    if(parent == newParent) return;
+    if(parent != NULL){
+        parent->removeChild(this);
+    }
+    newParent->addChild(this);
+}
