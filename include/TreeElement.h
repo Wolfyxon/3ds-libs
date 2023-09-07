@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <algorithm> 
+#include <string>
 
 using namespace std;
 
@@ -8,6 +9,8 @@ class TreeElement {
     public:
         TreeElement();
         ~TreeElement();
+
+        string name;
 
         /** Returns pointers to the children TreeElements */
         vector<TreeElement*> getChildren();
