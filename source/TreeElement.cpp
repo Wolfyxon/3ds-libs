@@ -76,6 +76,14 @@ bool TreeElement::hasChild(TreeElement* child){
     );
 }
 
+TreeElement* TreeElement::getChildByName(string name_){
+    for(size_t i=0;i<children.size();i++){
+        TreeElement* ch = children[i];
+        if(ch->name.compare(name_)) return ch;
+    }
+    return NULL;
+}
+
 TreeElement* TreeElement::getNthChild(size_t index){
     if(children.size()-1 < index ) return NULL;
     return children[index];

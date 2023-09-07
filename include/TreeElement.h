@@ -42,6 +42,11 @@ class TreeElement {
         */
        bool hasChild(TreeElement* child);
         /**
+         * Finds the first child having the specified name. Returns NULL if no results were found.
+         * @param name_ Name of the child."
+        */
+       TreeElement* getChildByName(string name_);
+        /**
          * Returns pointer to the child TreeElement at the specified index. Returns NULL if the child is not found.
          * @param index Index of the child.t.h"
         */
