@@ -2,6 +2,7 @@
 #include <3ds.h>
 #include <stdio.h>
 #include <vector>
+#include <iostream>
 #include <string>
 
 using namespace std;

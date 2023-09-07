@@ -1,11 +1,4 @@
 #include "../include/Console.h"
-#include <3ds.h>
-#include <stdio.h>
-#include <vector>
-#include <iostream>
-#include <string>
-
-using namespace std;
 
 gfxScreen_t screen;
 Console::Console(gfxScreen_t screen_){
