@@ -76,3 +76,7 @@ TreeElement* TreeElement::getNthChild(size_t index){
     if(children.size()-1 < index ) return NULL;
     return children[index];
 }
+
+TreeElement* TreeElement::getParent(){
+    return parent;
+}

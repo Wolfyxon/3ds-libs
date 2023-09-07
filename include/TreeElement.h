@@ -42,7 +42,8 @@ class TreeElement {
          * @param index Index of the child.
         */
        TreeElement* getNthChild(size_t index);
-
+        /** Returns pointer to the parent TreeElement or NULL if this TreeElement is an orphan. */
+       TreeElement* getParent();
     private:
         vector<TreeElement*> children;
         TreeElement* parent;
