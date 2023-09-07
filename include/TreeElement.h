@@ -44,7 +44,6 @@ class TreeElement {
         /**
          * Returns pointer to the child TreeElement at the specified index. Returns NULL if the child is not found.
          * @param index Index of the child.t.h"
-
         */
        TreeElement* getNthChild(size_t index);
         /** Returns pointer to the parent TreeElement or NULL if this TreeElement is an orphan. */
