@@ -44,7 +44,7 @@ void TreeElement::addChild(TreeElement* child){
 
 void TreeElement::removeChild(TreeElement* child, bool free){
     if(!hasChild(child)) return;
-    size_t idx = getChildIdx(child);
+    int idx = getChildIdx(child);
     if(idx == -1) return;
     vector<TreeElement*>::iterator it = children.begin();
     std::advance(it, idx);
@@ -54,7 +54,7 @@ void TreeElement::removeChild(TreeElement* child, bool free){
 }
 
 int TreeElement::getChildIdx(TreeElement* child){
-    for(int i=0; i<children.size(); i++){
+    for(int i=0; i<(int)children.size(); i++){
         if(children[i] == child) return i;
     }
     return -1;
