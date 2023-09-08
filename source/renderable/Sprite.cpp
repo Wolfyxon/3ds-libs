@@ -1,4 +1,4 @@
-#include "Sprite.h"
+#include "../../include/renderable/Sprite.h"
 
 bool Sprite::loadFromSheet(C2D_SpriteSheet sheet, unsigned int index){
     if(index > C2D_SpriteSheetCount(sheet)) return false;

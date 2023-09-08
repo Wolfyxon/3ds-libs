@@ -2,7 +2,7 @@
 #include <citro2d.h>
 #include <3ds.h>
 #include "Renderable.h"
-#include "TreeElement.h"
+#include "../TreeElement.h"
 
 class Scene : Renderable, TreeElement {
     public:
