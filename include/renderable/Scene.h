@@ -6,11 +6,12 @@
 
 class Scene : Renderable, TreeElement {
     public:
-        Scene(u32 backgroundColor_ = C2D_Color32f(0.0f,0.0f,0.0f,1.0f));
+        Scene(gfxScreen_t screen_, u32 backgroundColor_ = C2D_Color32f(0.0f,0.0f,0.0f,1.0f));
         ~Scene();
 
         u32 backgroundColor;
         bool clearOnRender = true;
+        C3D_RenderTarget renderTarget;
 
         void render(gfxScreen_t screen);
 };
