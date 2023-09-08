@@ -12,17 +12,23 @@ vector<TreeElement*> TreeElement::getChildren(){
     return children;
 }
 
-vector<TreeElement*> TreeElement::getDescendants(){
+vector<TreeElement*> TreeElement::getDescendants(std::unordered_set<TreeElement*>& visited){
     vector<TreeElement*> res;
-    
-    for(size_t i=0; i<children.size(); i++){
-        TreeElement* child = children[i];
-        res.push_back(child);
-        vector<TreeElement*> sub = child->getDescendants();
-        res.insert(res.end(), sub.begin(), sub.end());
+    if (visited.count(this) == 0) {
+        visited.insert(this);
+        for (size_t i = 0; i < children.size(); i++) {
+            TreeElement* child = children[i];
+            res.push_back(child);
+            vector<TreeElement*> sub = child->getDescendants(visited);
+            res.insert(res.end(), sub.begin(), sub.end());
+        }
     }
-    
     return res;
+}
+
+vector<TreeElement*> TreeElement::getDescendants() {
+    std::unordered_set<TreeElement*> visited;
+    return getDescendants(visited);
 }
 
 vector<TreeElement*> TreeElement::getAncestors(){
