@@ -65,6 +65,7 @@ void TreeElement::free(){
     for(size_t i=0; i<children.size(); i++){
         TreeElement* ch = children[i];
         ch->free();
+        delete ch;
     }
     children.clear();
 }
