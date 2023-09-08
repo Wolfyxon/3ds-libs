@@ -2,7 +2,7 @@
 #include "Renderable.h"
 #include <citro2d.h>
 
-class Sprite : Renderable {
+class Sprite : public Renderable {
     public:
         Sprite();
         ~Sprite();
