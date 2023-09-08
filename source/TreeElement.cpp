@@ -96,8 +96,6 @@ TreeElement* TreeElement::getParent(){
 
 void TreeElement::setParent(TreeElement* newParent){
     if(parent == newParent) return;
-    if(parent != NULL){
-        parent->removeChild(this,false);
-    }
+    if(parent != NULL) parent->removeChild(this,false);
     newParent->addChild(this);
 }
