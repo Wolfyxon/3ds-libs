@@ -49,7 +49,7 @@ void TreeElement::removeChild(TreeElement* child, bool free){
     vector<TreeElement*>::iterator it = children.begin();
     std::advance(it, idx);
     children.erase(it);
-    child->parent = NULL;
+    child->setParent(NULL);
     if(free) child->free();
 }
 
