@@ -12,8 +12,6 @@ class TreeElement {
 
         string name;
 
-        /** This function does nothing. It only exists because dynamic_cast requires a virtual function */
-        virtual void nothing();
         /** Returns pointers to the children TreeElements */
         vector<TreeElement*> getChildren();
         /** Returns pointers to all descendant TreeElements (children, children of children, and so on...)*/
