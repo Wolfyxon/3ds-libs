@@ -1,8 +1,9 @@
 #pragma once
 #include "Renderable.h"
+#include "../TreeElement.h"
 #include <citro2d.h>
 
-class Sprite : public Renderable {
+class Sprite : public Renderable, public TreeElement {
     public:
         Sprite();
         ~Sprite();
