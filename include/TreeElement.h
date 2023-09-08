@@ -3,10 +3,11 @@
 #include <algorithm> 
 #include <string>
 #include <unordered_set>
+#include "Debuggable.h"
 
 using namespace std;
 
-class TreeElement {
+class TreeElement : public Debuggable {
     public:
         TreeElement(string name_ = "TreeElement");
         ~TreeElement();
