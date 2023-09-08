@@ -61,7 +61,7 @@ int TreeElement::getChildIdx(TreeElement* child){
 }
 
 void TreeElement::free(){
-    if(parent != NULL) parent->removeChild(this);
+    if(parent != NULL) parent->removeChild(this,false);
     for(size_t i=0; i<children.size(); i++){
         TreeElement* ch = children[i];
         ch->free();
