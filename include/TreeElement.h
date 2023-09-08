@@ -7,7 +7,7 @@ using namespace std;
 
 class TreeElement {
     public:
-        TreeElement(string name_ = NULL);
+        TreeElement(string name_ = "TreeElement");
         ~TreeElement();
 
         string name;
