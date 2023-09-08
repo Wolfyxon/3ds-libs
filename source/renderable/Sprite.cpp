@@ -1,5 +1,12 @@
 #include "../../include/renderable/Sprite.h"
 
+Sprite::Sprite(){
+
+}
+Sprite::~Sprite(){
+    
+}
+
 bool Sprite::loadFromSheet(C2D_SpriteSheet sheet, unsigned int index){
     if(index > C2D_SpriteSheetCount(sheet)) return false;
     C2D_SpriteFromSheet(&c2dSprite,sheet,index);
