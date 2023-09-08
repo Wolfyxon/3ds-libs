@@ -13,5 +13,5 @@ class Scene : Renderable, TreeElement {
         bool clearOnRender = true;
         C3D_RenderTarget renderTarget;
 
-        void render(gfxScreen_t screen);
+        void render();
 };
