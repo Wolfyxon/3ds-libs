@@ -14,13 +14,14 @@ vector<TreeElement*> TreeElement::getChildren(){
 
 vector<TreeElement*> TreeElement::getDescendants(){
     vector<TreeElement*> res;
-    for(size_t i=0; i<children.size(); i++){
+    for(size_t i=0; i<children.size() && i<10; i++){
         TreeElement* child = children[i];
         res.push_back(child);
         vector<TreeElement*> sub = child->getDescendants();
-        for(size_t ii=0; i<sub.size(); ii++){
-            res.push_back(sub[i]);
+        for(size_t ii=0; ii<sub.size(); ii++){
+            res.push_back(sub[ii]);
         }
+        sub.clear();
     }
     return res;
 }
