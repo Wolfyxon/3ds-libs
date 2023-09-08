@@ -11,7 +11,7 @@ class Scene : Renderable, TreeElement {
 
         u32 backgroundColor;
         bool clearOnRender = true;
-        C3D_RenderTarget renderTarget;
+        C3D_RenderTarget* renderTarget;
 
         void render();
 };
