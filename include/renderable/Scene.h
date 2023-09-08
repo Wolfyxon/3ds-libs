@@ -1,8 +1,11 @@
 #pragma once
 #include <citro2d.h>
 #include <3ds.h>
+#include <type_traits>
 #include "Renderable.h"
 #include "../TreeElement.h"
+
+using namespace std;
 
 class Scene : Renderable, TreeElement {
     public:
