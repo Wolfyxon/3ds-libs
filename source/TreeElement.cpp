@@ -12,17 +12,16 @@ vector<TreeElement*> TreeElement::getChildren(){
     return children;
 }
 
-vector<TreeElement*> TreeElement::getDescendants(){
+vector<TreeElement*> TreeElement::getDescendants() {
     vector<TreeElement*> res;
-    for(size_t i=0; i<children.size() && i<10; i++){
+    
+    for (size_t i = 0; i < children.size(); i++) {
         TreeElement* child = children[i];
         res.push_back(child);
         vector<TreeElement*> sub = child->getDescendants();
-        for(size_t ii=0; ii<sub.size(); ii++){
-            res.push_back(sub[ii]);
-        }
-        sub.clear();
+        res.insert(res.end(), sub.begin(), sub.end());
     }
+    
     return res;
 }
 
