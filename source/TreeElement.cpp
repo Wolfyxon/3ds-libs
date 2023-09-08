@@ -37,7 +37,7 @@ vector<TreeElement*> TreeElement::getAncestors(){
 
 void TreeElement::addChild(TreeElement* child){
     if(child->getParent() == this) return;
-    child->setParent(this);
+    child->setParent(this,false);
     children.push_back(child);
 }
 
