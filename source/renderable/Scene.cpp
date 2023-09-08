@@ -1,6 +1,7 @@
 #include "../../include/renderable/Scene.h"
 
 Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
+    name = "Scene";
     renderTarget = C2D_CreateScreenTarget(screen, GFX_LEFT);
     backgroundColor = backgroundColor_;
 }

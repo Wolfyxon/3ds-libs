@@ -11,7 +11,7 @@ class TreeElement {
         TreeElement(string name_ = "TreeElement");
         ~TreeElement();
 
-        string name;
+        string name = "TreeElement";
 
         /** Returns pointers to the children TreeElements */
         vector<TreeElement*> getChildren();

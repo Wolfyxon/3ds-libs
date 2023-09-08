@@ -1,7 +1,7 @@
 #include "../../include/renderable/Sprite.h"
 
 Sprite::Sprite(){
-
+    name = "Sprite";
 }
 Sprite::~Sprite(){
     
