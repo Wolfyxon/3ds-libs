@@ -58,8 +58,9 @@ class TreeElement {
         /**
          * Moves this TreeElement to a new parent or assigns it if this is an orphan.
          * @param parent Pointer to the new parent TreeElement.
+         * @param dontAdd Should addChild() be called.
         */
-       void setParent(TreeElement* parent);
+       void setParent(TreeElement* parent, bool dontAdd = false);
     private:
         vector<TreeElement*> children;
         TreeElement* parent;

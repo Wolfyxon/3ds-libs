@@ -93,10 +93,10 @@ TreeElement* TreeElement::getParent(){
     return parent;
 }
 
-void TreeElement::setParent(TreeElement* newParent){
+void TreeElement::setParent(TreeElement* newParent, bool dontAdd){
     if(parent == newParent) return;
     if(parent != NULL) parent->removeChild(this,false);
-    if(newParent != NULL){
+    if(newParent != NULL && !dontAdd){
         newParent->addChild(this);
     }
     parent = newParent;
