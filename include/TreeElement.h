@@ -36,22 +36,22 @@ class TreeElement : public Debuggable {
          * @param child Pointer to child TreeElement.
          * @param free Should the child data be freed.
         */
-       void removeChild(TreeElement* child, bool free = true);
+       void removeChild(TreeElement *child, bool free = true);
        /**
         * Returns index of a child. Returns -1 if the child is not found.
         * @param child Pointer to child TreeElement.
        */
-        int getChildIdx(TreeElement* child);
+        int getChildIdx(TreeElement *child);
         /**
          * Adds another TreeElement as a child.
          * @param element Pointer to the TreeElement you want to add.
         */
-       void addChild(TreeElement* child);
+       void addChild(TreeElement *child);
         /**
          * Checks if the current element is the parent of a child.
          * @param child Pointer to child TreeElement.
         */
-       bool hasChild(TreeElement* child);
+       bool hasChild(TreeElement *child);
         /**
          * Finds the first child having the specified name. Returns NULL if no results were found.
          * @param name_ Name of the child."
@@ -68,12 +68,12 @@ class TreeElement : public Debuggable {
          * Moves this TreeElement to a new parent or assigns it if this is an orphan.
          * @param parent Pointer to the new parent TreeElement.
         */
-       void setParent(TreeElement* parent);
+       void setParent(TreeElement *parent);
         /**
          * Warning: you're probably looking for setParent! Assigns the parent.
          * @param parent Pointer to the new parent TreeElement.
         */
-       void assignParent(TreeElement* parent);
+       void assignParent(TreeElement *parent);
 
     private:
         vector<TreeElement*> children;
