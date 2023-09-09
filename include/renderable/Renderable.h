@@ -6,11 +6,11 @@
 
 class Renderable {
     public:
-        Renderable();
-        ~Renderable();
-        
+        Renderable() = default;
+        virtual ~Renderable() = default;
+
         /** Renders the renderable object. */
-        virtual void render();
+        virtual void render() = 0;
 };
 
 #endif
