@@ -12,9 +12,8 @@ void Scene::render(){
     C2D_SceneBegin(renderTarget);
 
     vector<TreeElement *> descendants = getDescendants();
-    for(size_t i=0; i<descendants.size();i++){
-        TreeElement *desc = descendants[i];
-        if (is_base_of<Renderable, decltype(desc)>::value){
+    for(TreeElement *desc : descendants){
+        if (is_base_of<Renderable* , decltype(desc)>::value){
             Renderable *rend = (Renderable*)desc;
             rend->render();
         }
