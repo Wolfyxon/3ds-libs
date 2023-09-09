@@ -22,9 +22,9 @@ class TreeElement : public Debuggable {
         static string getType(){return "TreeElement";}
 
         /** Returns pointers to the children TreeElements */
-        vector<TreeElement*> getChildren();
+        vector<TreeElement *> getChildren();
         /** Returns pointers to all descendant TreeElements (children, children of children, and so on...)*/
-        vector<TreeElement*> getDescendants();
+        vector<TreeElement *> getDescendants();
         /** 
          * Returns pointers to all descendant TreeElements (children, children of children, and so on...)
          * @param visited Visited nodes. Used to prevent infinite recursion.
@@ -79,8 +79,8 @@ class TreeElement : public Debuggable {
        void assignParent(TreeElement *parent);
 
     private:
-        vector<TreeElement*> children;
-        TreeElement* parent;
+        vector<TreeElement *> children;
+        TreeElement *parent;
 };
 
 #endif
