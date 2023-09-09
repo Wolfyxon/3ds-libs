@@ -1,3 +1,6 @@
+#ifndef CONSOLE_H
+#define CONSOLE_H
+
 #pragma once
 #include <3ds.h>
 #include <stdio.h>
@@ -80,3 +83,5 @@ public:
     */
     static string ansi(Ansi_code type);
 };
+
+#endif

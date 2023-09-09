@@ -1,3 +1,6 @@
+#ifndef SPRITE_H
+#define SPRITE_H
+
 #pragma once
 #include "Renderable.h"
 #include "../TreeElement.h"
@@ -74,3 +77,5 @@ class Sprite : public Renderable, public TreeElement {
         unsigned int height = 0;
 
 };
+
+#endif

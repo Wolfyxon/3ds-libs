@@ -1,3 +1,6 @@
+#ifndef SCENE_H
+#define SCENE_H
+
 #pragma once
 #include <citro2d.h>
 #include <3ds.h>
@@ -18,3 +21,5 @@ class Scene : public Renderable, public TreeElement {
 
         void render();
 };
+
+#endif

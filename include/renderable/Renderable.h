@@ -1,3 +1,6 @@
+#ifndef RENDERABLE_H
+#define RENDERABLE_H
+
 #pragma once
 #include <3ds.h>
 
@@ -6,3 +9,5 @@ class Renderable {
         /** Renders the renderable object. */
         void render();
 };
+
+#endif

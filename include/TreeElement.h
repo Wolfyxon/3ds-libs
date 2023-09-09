@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef TREE_ELEMENT_H
+#define TREE_ELEMENT_H
+
 #include <vector>
 #include <algorithm> 
 #include <string>
@@ -75,3 +79,5 @@ class TreeElement : public Debuggable {
         vector<TreeElement*> children;
         TreeElement* parent;
 };
+
+#endif
