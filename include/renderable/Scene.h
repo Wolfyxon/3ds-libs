@@ -22,7 +22,7 @@ class Scene : public Renderable, public TreeElement {
         /** Returns the type name of the TreeElement. */
         virtual string getType(){return "Scene";}
 
-        void render();
+        virtual void render();
 };
 
 #endif

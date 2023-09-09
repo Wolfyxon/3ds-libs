@@ -7,7 +7,7 @@
 class Renderable {
     public:
         /** Renders the renderable object. */
-        void render();
+        virtual void render();
 };
 
 #endif

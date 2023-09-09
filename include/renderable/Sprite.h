@@ -73,7 +73,7 @@ class Sprite : public Renderable, public TreeElement {
         */
         void loadFromImage(C2D_Image image);
         /** Renders the sprite*/
-        void render();
+        virtual void render();
 
     private:
         unsigned int width = 0;
