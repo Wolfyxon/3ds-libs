@@ -19,6 +19,9 @@ class Scene : public Renderable, public TreeElement {
         bool clearOnRender = true;
         C3D_RenderTarget* renderTarget;
 
+        /** Returns the type name of the TreeElement. */
+        static string getType(){return "Scene";}
+
         void render();
 };
 

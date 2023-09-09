@@ -19,6 +19,9 @@ class Sprite : public Renderable, public TreeElement {
         float scaleX = 1;
         float scaleY = 1;
 
+        /** Returns the type name of the TreeElement. */
+        static string getType(){return "Sprite";}
+
         /** Returns the width in pixels. */
         unsigned int getWidth();
         /** Returns the height in pixels. */
