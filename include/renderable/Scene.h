@@ -20,7 +20,7 @@ class Scene : public Renderable, public TreeElement {
         C3D_RenderTarget* renderTarget;
 
         /** Returns the type name of the TreeElement. */
-        static string getType(){return "Scene";}
+        virtual string getType(){return "Scene";}
 
         void render();
 };

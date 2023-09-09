@@ -19,7 +19,7 @@ class TreeElement : public Debuggable {
         string name = "TreeElement";
 
         /** Returns the type name of the TreeElement. */
-        static string getType(){return "TreeElement";}
+        virtual string getType(){return "TreeElement";}
 
         /** Returns pointers to the children TreeElements */
         vector<TreeElement *> getChildren();
