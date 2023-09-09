@@ -6,6 +6,9 @@
 
 class Renderable {
     public:
+        Renderable();
+        ~Renderable();
+        
         /** Renders the renderable object. */
         virtual void render();
 };
