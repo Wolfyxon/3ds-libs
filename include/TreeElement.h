@@ -29,9 +29,9 @@ class TreeElement : public Debuggable {
          * Returns pointers to all descendant TreeElements (children, children of children, and so on...)
          * @param visited Visited nodes. Used to prevent infinite recursion.
          */
-        vector<TreeElement*> getDescendants(std::unordered_set<TreeElement*>& visited);
+        vector<TreeElement *> getDescendants(std::unordered_set<TreeElement*>& visited);
         /** Returns pointers to all ancestor TreeElements (parent, parent of parent, and so on...)*/
-        vector<TreeElement*> getAncestors();
+        vector<TreeElement *> getAncestors();
         /** Deletes the TreeElement */
         void free();
         /**
