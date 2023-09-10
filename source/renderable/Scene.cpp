@@ -1,4 +1,5 @@
 #include "../../include/renderable/Scene.h"
+#include "../../include/renderable/Sprite.h"
 
 Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
     name = "Scene";
@@ -18,6 +19,6 @@ void Scene::render(){
             rend->render();
         }
     }
-    descendants.clear();
+    //descendants.clear();
     C3D_FrameEnd(0);
 }
