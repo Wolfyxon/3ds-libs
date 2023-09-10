@@ -1,5 +1,5 @@
-#ifndef DEBUGGABLE_H
-#define DEBUGGABLE_H
+#ifndef DEBUG_H
+#define DEBUG_H
 
 #pragma once
 
