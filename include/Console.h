@@ -7,6 +7,8 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include "renderable/Renderable.h"
+#include "TreeElement.h"
 
 using namespace std;
 
@@ -29,8 +31,7 @@ enum Ansi_code {
     strikethrough = 9,
 };
 
-class Console
-{
+class Console : public Renderable, public TreeElement {
 private:
     vector<string> output;
     PrintConsole printConsole;
