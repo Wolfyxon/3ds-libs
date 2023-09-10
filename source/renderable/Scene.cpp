@@ -24,7 +24,7 @@ void Scene::render(){
 
     vector<TreeElement *> descendants = getDescendants();
     for(TreeElement *desc : descendants){
-        if (is_base_of<Renderable* , decltype(desc)>::value){
+        if(instanceof(desc,"Renderable")){ //is_base_of<Renderable* , decltype(desc)>::value
             Renderable *rend = (Renderable*)desc;
             rend->render();
         }
