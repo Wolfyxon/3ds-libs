@@ -8,6 +8,12 @@ TreeElement::~TreeElement(){
     free();
 }
 
+string* getExtended(){
+    string* ext = new string[3];
+    ext[0] = "Debuggable";
+    ext[1] = "Classified";
+}
+
 vector<TreeElement *> TreeElement::getChildren(){
     return children;
 }

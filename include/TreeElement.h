@@ -8,10 +8,11 @@
 #include <string>
 #include <unordered_set>
 #include "Debuggable.h"
+#include "Classified.h"
 
 using namespace std;
 
-class TreeElement : public Debuggable {
+class TreeElement : public Classified, public Debuggable {
     public:
         TreeElement(string name_ = "TreeElement");
         ~TreeElement();
@@ -20,6 +21,8 @@ class TreeElement : public Debuggable {
 
         /** Returns the type name of the TreeElement. */
         virtual string getType(){return "TreeElement";}
+        /** Returns names of extended classes. */
+        virtual string* getExtended();
 
         /** Returns pointers to the children TreeElements */
         vector<TreeElement *> getChildren();
