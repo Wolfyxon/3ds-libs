@@ -10,6 +10,8 @@ class Debuggable {
     public:
         static void msg(const char* message);
         static void msg(std::string* message);
+        static void msg(std::string message);
+        
 };
 
 #endif

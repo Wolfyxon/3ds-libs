@@ -7,3 +7,7 @@ void Debuggable::msg(const char* message){
 void Debuggable::msg(std::string* message){
     msg(message->c_str());
 }
+
+void Debuggable::msg(std::string message){
+    msg(message.c_str());
+}
