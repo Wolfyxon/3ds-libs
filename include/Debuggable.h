@@ -5,6 +5,7 @@
 
 #include <3ds.h>
 #include <string>
+#include <cstring>
 
 class Debuggable {
     public:

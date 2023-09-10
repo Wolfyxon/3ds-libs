@@ -1,7 +1,7 @@
 #include "../include/Debuggable.h"
 
 void Debuggable::msg(const char* message){
-    svcOutputDebugString(message,sizeof(message));
+    svcOutputDebugString(message,std::strlen(message));
 }
 
 void Debuggable::msg(std::string* message){
