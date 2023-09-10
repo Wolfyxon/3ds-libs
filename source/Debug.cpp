@@ -1,4 +1,4 @@
-#include "../include/Debuggable.h"
+#include "../include/Debug.h"
 
 void debugMsg(const char* message){
     svcOutputDebugString(message,std::strlen(message));
