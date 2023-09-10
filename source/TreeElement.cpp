@@ -8,7 +8,7 @@ TreeElement::~TreeElement(){
     free();
 }
 
-string* getExtended(){
+string* TreeElement::getExtended(){
     string* ext = new string[2];
     ext[0] = "Debuggable";
     ext[1] = "Classified";

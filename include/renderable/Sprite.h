@@ -9,7 +9,7 @@
 class Sprite : public Renderable, public TreeElement {
     public:
         Sprite();
-        ~Sprite();
+        virtual ~Sprite();
 
         C2D_Sprite c2dSprite;
 

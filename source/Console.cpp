@@ -9,7 +9,7 @@ Console::~Console(){
     clear();
 }
 
-string* getExtended(){
+string* Console::getExtended(){
     string* ext = new string[4];
     ext[0] = "Debuggable";
     ext[1] = "Classified";

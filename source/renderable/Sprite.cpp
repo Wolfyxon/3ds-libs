@@ -7,7 +7,7 @@ Sprite::~Sprite(){
     
 }
 
-string* getExtended(){
+string* Sprite::getExtended(){
     string* ext = new string[4];
     ext[0] = "Debuggable";
     ext[1] = "Classified";

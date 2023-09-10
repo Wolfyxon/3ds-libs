@@ -15,7 +15,7 @@ using namespace std;
 class TreeElement : public Classified, public Debuggable {
     public:
         TreeElement(string name_ = "TreeElement");
-        ~TreeElement();
+        virtual ~TreeElement();
 
         string name = "TreeElement";
 

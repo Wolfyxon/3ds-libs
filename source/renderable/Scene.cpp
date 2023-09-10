@@ -8,7 +8,7 @@ Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
 }
 
 
-string* getExtended(){
+string* Scene::getExtended(){
     string* ext = new string[4];
     ext[0] = "Debuggable";
     ext[1] = "Classified";
