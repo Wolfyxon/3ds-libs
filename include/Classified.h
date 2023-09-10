@@ -18,6 +18,6 @@ class Classified {
 * @param classified Pointer to the Classified object.
 * @param className Name of the class you want to look for.
 */
-static bool instanceof(Classified *classified, string className);
+bool instanceof(Classified *classified, string className);
 
 #endif
