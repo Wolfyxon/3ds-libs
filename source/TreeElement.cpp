@@ -9,7 +9,7 @@ TreeElement::~TreeElement(){
 }
 
 string* getExtended(){
-    string* ext = new string[3];
+    string* ext = new string[2];
     ext[0] = "Debuggable";
     ext[1] = "Classified";
 }
