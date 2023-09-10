@@ -12,6 +12,7 @@ string* getExtended(){
     string* ext = new string[2];
     ext[0] = "Debuggable";
     ext[1] = "Classified";
+    return ext;
 }
 
 vector<TreeElement *> TreeElement::getChildren(){

@@ -22,6 +22,8 @@ class Sprite : public Renderable, public TreeElement {
         /** Returns the type name of the TreeElement. */
         virtual string getType(){return "Sprite";}
 
+        virtual string* getExtended();
+
         /** Returns the width in pixels. */
         unsigned int getWidth();
         /** Returns the height in pixels. */

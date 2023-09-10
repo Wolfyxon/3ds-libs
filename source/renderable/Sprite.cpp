@@ -7,6 +7,15 @@ Sprite::~Sprite(){
     
 }
 
+string* getExtended(){
+    string* ext = new string[4];
+    ext[0] = "Debuggable";
+    ext[1] = "Classified";
+    ext[2] = "TreeElement";
+    ext[3] = "Renderable";
+    return ext;
+}
+
 bool Sprite::loadFromSheet(C2D_SpriteSheet sheet, unsigned int index){
     if(index > C2D_SpriteSheetCount(sheet)) return false;
     C2D_SpriteFromSheet(&c2dSprite,sheet,index);

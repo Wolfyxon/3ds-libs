@@ -7,6 +7,16 @@ Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
     backgroundColor = backgroundColor_;
 }
 
+
+string* getExtended(){
+    string* ext = new string[4];
+    ext[0] = "Debuggable";
+    ext[1] = "Classified";
+    ext[2] = "TreeElement";
+    ext[3] = "Renderable";
+    return ext;
+}
+
 void Scene::render(){
     C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
     C2D_TargetClear(renderTarget, backgroundColor);

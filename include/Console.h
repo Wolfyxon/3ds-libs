@@ -44,6 +44,9 @@ public:
 
     Console(gfxScreen_t screen_);
     ~Console();
+
+    virtual string* getExtended();
+
     /** Prints line of text.
     * @param text The text you want to print. ANSI codes are supported.
     */
