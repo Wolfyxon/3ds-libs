@@ -10,7 +10,8 @@
 #include "renderable/Renderable.h"
 #include "TreeElement.h"
 
-using namespace std;
+using std::string;
+using std::cout;
 
 enum Color {
     black,

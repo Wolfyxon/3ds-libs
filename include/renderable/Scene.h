@@ -8,8 +8,6 @@
 #include "Renderable.h"
 #include "../TreeElement.h"
 
-using namespace std;
-
 class Scene : public Renderable, public TreeElement {
     public:
         Scene(gfxScreen_t screen_, u32 backgroundColor_ = C2D_Color32f(0.0f,0.0f,0.0f,1.0f));

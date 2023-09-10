@@ -10,7 +10,9 @@
 #include "debug.h"
 #include "Classified.h"
 
-using namespace std;
+using std::vector;
+using std::string;
+using std::to_string;
 
 class TreeElement : public Classified {
     public:
