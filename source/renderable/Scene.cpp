@@ -10,9 +10,9 @@ Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
 
 string* Scene::getExtended(){
     string* ext = new string[4];
-    ext[1] = "Classified";
-    ext[2] = "TreeElement";
-    ext[3] = "Renderable";
+    ext[0] = "Classified";
+    ext[1] = "TreeElement";
+    ext[2] = "Renderable";
     return ext;
 }
 

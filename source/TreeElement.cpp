@@ -10,7 +10,7 @@ TreeElement::~TreeElement(){
 
 string* TreeElement::getExtended(){
     string* ext = new string[2];
-    ext[1] = "Classified";
+    ext[0] = "Classified";
     return ext;
 }
 
