@@ -57,3 +57,7 @@ void Sprite::render(){
     C2D_SpriteScale(&c2dSprite,scaleX,scaleY);
     C2D_DrawSprite(&c2dSprite);
 }
+
+bool Sprite::isLoaded(){
+    return loaded;
+}

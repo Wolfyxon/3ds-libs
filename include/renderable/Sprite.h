@@ -76,6 +76,8 @@ class Sprite : public Renderable, public TreeElement {
         void loadFromImage(C2D_Image image);
         /** Renders the sprite*/
         virtual void render();
+        /** Checks if the sprite texture is loaded */
+        bool isLoaded();
 
     private:
         unsigned int width = 0;
