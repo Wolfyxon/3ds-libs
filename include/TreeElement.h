@@ -7,12 +7,12 @@
 #include <algorithm> 
 #include <string>
 #include <unordered_set>
-#include "Debuggable.h"
+#include "Debug.h"
 #include "Classified.h"
 
 using namespace std;
 
-class TreeElement : public Classified, public Debuggable {
+class TreeElement : public Classified {
     public:
         TreeElement(string name_ = "TreeElement");
         virtual ~TreeElement();
