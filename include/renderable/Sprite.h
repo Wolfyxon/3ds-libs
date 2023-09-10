@@ -80,6 +80,7 @@ class Sprite : public Renderable, public TreeElement {
     private:
         unsigned int width = 0;
         unsigned int height = 0;
+        bool loaded;
 
 };
 

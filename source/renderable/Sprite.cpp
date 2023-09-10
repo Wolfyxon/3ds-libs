@@ -18,6 +18,7 @@ string* Sprite::getExtended(){
 bool Sprite::loadFromSheet(C2D_SpriteSheet sheet, unsigned int index){
     if(index > C2D_SpriteSheetCount(sheet)) return false;
     C2D_SpriteFromSheet(&c2dSprite,sheet,index);
+    loaded = true;
     return true;
 }
 
@@ -31,6 +32,7 @@ bool Sprite::loadFromSheetFile(char* path, unsigned int index){
 
 void Sprite::loadFromImage(C2D_Image image){
     C2D_SpriteFromImage(&c2dSprite,image);
+    loaded = true;
 }
 
 unsigned int Sprite::getHeight(){
