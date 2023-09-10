@@ -1,8 +1,7 @@
 #include "../include/Classified.h"
 
 string* Classified::getExtended(){
-    string* ext = new string[1];
-    ext[0] = "Classified";
+    string* ext = new string[0];
     return ext;
 }
 
