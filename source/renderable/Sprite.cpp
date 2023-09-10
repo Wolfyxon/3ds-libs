@@ -4,7 +4,9 @@ Sprite::Sprite(){
     name = "Sprite";
 }
 Sprite::~Sprite(){
-    
+    if(tempSheet != NULL){
+        C2D_SpriteSheetFree(tempSheet);
+    }
 }
 
 string* Sprite::getExtended(){
@@ -23,9 +25,9 @@ bool Sprite::loadFromSheet(C2D_SpriteSheet sheet, unsigned int index){
 }
 
 bool Sprite::loadFromSheetFile(char* path, unsigned int index){
-    C2D_SpriteSheet sheet = C2D_SpriteSheetLoad(path);
-    if(sheet == NULL) return false;
-    bool res = loadFromSheet(sheet, index);
+    tempSheet = C2D_SpriteSheetLoad(path);
+    if(tempSheet == NULL) return false;
+    bool res = loadFromSheet(tempSheet, index);
     return res;
 }
 

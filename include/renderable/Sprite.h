@@ -83,6 +83,7 @@ class Sprite : public Renderable, public TreeElement {
         unsigned int width = 0;
         unsigned int height = 0;
         bool loaded;
+        C2D_SpriteSheet tempSheet;
 
 };
 
