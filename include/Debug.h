@@ -7,9 +7,9 @@
 #include <string>
 #include <cstring>
 
-static void debugMsg(const char* message);
-static void debugMsg(std::string* message);
-static void debugMsg(std::string message);
+void debugMsg(const char* message);
+void debugMsg(std::string* message);
+void debugMsg(std::string message);
         
 
 #endif
