@@ -26,7 +26,6 @@ bool Sprite::loadFromSheetFile(char* path, unsigned int index){
     C2D_SpriteSheet sheet = C2D_SpriteSheetLoad(path);
     if(sheet == NULL) return false;
     bool res = loadFromSheet(sheet, index);
-    C2D_SpriteSheetFree(sheet);
     return res;
 }
 
