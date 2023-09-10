@@ -25,8 +25,16 @@ void Scene::render(){
     vector<TreeElement *> descendants = getDescendants();
     for(TreeElement *desc : descendants){
         if(instanceof(desc,"Renderable")){
+            /*
+            // render() is called on Renderable instead of the actual desc's class.
             Renderable *rend = (Renderable*)desc;
             rend->render();
+            */
+           // TODO: Find a way to make this universal instead of making every combination.
+           if(instanceof(desc,"Sprite")){
+                Sprite *rend = (Sprite*)desc;
+                rend->render();
+           }
         }
     }
     //descendants.clear();
