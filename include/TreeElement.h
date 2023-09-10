@@ -7,7 +7,7 @@
 #include <algorithm> 
 #include <string>
 #include <unordered_set>
-#include "Debug.h"
+#include "debug.h"
 #include "Classified.h"
 
 using namespace std;
