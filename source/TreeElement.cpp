@@ -129,7 +129,7 @@ vector<TreeElement *> TreeElement::rmNotMatchingType(vector<TreeElement *> eleme
     vector<TreeElement *> res;
     for(TreeElement *el : elements){
         if(
-            strict && el->getType() == type ||
+            strict && el->getType().compare(type) ||
             !strict && instanceof(el, type)
         ) res.push_back(el);
     }
