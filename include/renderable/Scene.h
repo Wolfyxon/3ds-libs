@@ -21,7 +21,7 @@ class Scene : public Renderable, public TreeElement {
         virtual string getType(){return "Scene";}
 
         virtual string* getExtended();
-
+        /** Renders the scene background and all renderable descendants.*/
         virtual void render();
 };
 
