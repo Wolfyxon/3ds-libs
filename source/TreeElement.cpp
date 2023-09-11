@@ -125,7 +125,7 @@ void TreeElement::assignParent(TreeElement *newParent){
     parent = newParent;
 }
 
-vector<TreeElement *> TreeElement::rmNotMatchingType(vector<TreeElement *> elements, string type, bool strict=false){
+vector<TreeElement *> TreeElement::rmNotMatchingType(vector<TreeElement *> elements, string type, bool strict){
     vector<TreeElement *> res;
     for(TreeElement *el : elements){
         if(
