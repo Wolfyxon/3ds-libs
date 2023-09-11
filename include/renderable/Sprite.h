@@ -26,6 +26,13 @@ class Sprite : public Renderable, public TreeElement {
 
         virtual string* getExtended();
 
+        /**
+         * Converts the specified degrees into radians then sets them.
+         * @param degrees Rotation degrees.
+        */
+        void setRotationDegrees(float degrees);
+        /** Returns the converted Sprite's rotation in radians into degrees. */
+        float getRotationDegrees();
         /** Returns the width in pixels. */
         unsigned int getWidth();
         /** Returns the height in pixels. */

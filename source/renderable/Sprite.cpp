@@ -44,6 +44,18 @@ unsigned int Sprite::getWidth(){
     return c2dSprite.image.tex->width;
 }
 
+float Sprite::getRotationDegrees(){
+    return rotationRad*360;
+}
+
+void Sprite::setRotationDegrees(float degrees){
+    if(degrees == 0){ //to prevent zero-division error
+        rotationRad = 0;
+        return;
+    }
+    rotationRad = degrees/360;
+}
+
 void Sprite::setScale(float x, float y){
     scaleX = x;
     scaleY = y;
