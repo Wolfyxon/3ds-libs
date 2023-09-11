@@ -13,6 +13,8 @@ class Sprite : public Renderable, public TreeElement {
 
         C2D_Sprite c2dSprite;
 
+        float rotationRad = 0;
+
         int posX = 0;
         int posY = 0;
 
