@@ -47,6 +47,10 @@ vector<TreeElement *> TreeElement::getAncestors(){
     return res;
 }
 
+vector<TreeElement *> TreeElement::getChildrenOfType(string type, bool strict){
+    return rmNotMatchingType(getChildren(),type,strict);
+}
+
 void TreeElement::addChild(TreeElement *child){
     if(child->getParent() == this) return;
     child->assignParent(this);
