@@ -55,7 +55,7 @@ void Sprite::setCenter(float x, float y){
 
 void Sprite::render(){
     C2D_SpriteSetPos(&c2dSprite,posX,posY);
-    C2D_SpriteScale(&c2dSprite,scaleX,scaleY);
+    C2D_SpriteSetScale(&c2dSprite,scaleX,scaleY);
     C2D_DrawSprite(&c2dSprite);
 }
 
