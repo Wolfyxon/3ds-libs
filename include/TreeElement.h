@@ -43,6 +43,12 @@ class TreeElement : public Classified {
          * @param strict Should the function check if the child extends or matches the specified type or only if it matches the type.
          */
         vector<TreeElement *> getChildrenOfType(string type, bool strict=false);
+        /** 
+         * Returns pointers to the descendant TreeElements matching or extending the specified type. 
+         * @param type Name of the type.
+         * @param strict Should the function check if the descendant extends or matches the specified type or only if it matches the type.
+         */
+        vector<TreeElement *> getDescendantsOfType(string type, bool strict=false);
         /** Deletes the TreeElement */
         void free();
         /**

@@ -51,6 +51,10 @@ vector<TreeElement *> TreeElement::getChildrenOfType(string type, bool strict){
     return rmNotMatchingType(getChildren(),type,strict);
 }
 
+vector<TreeElement *> TreeElement::getDescendantsOfType(string type, bool strict){
+    return rmNotMatchingType(getDescendants(),type,strict);
+}
+
 void TreeElement::addChild(TreeElement *child){
     if(child->getParent() == this) return;
     child->assignParent(this);
