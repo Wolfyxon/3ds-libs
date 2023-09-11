@@ -86,6 +86,8 @@ class TreeElement : public Classified {
     private:
         vector<TreeElement *> children;
         TreeElement *parent;
+
+        vector<TreeElement *> rmNotMatchingType(vector<TreeElement *> elements, string type, bool strict=false);
 };
 
 #endif
