@@ -17,6 +17,7 @@ string* Scene::getExtended(){
 }
 
 void Scene::render(){
+    if(!visible) return;
     C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
     C2D_TargetClear(renderTarget, backgroundColor);
     C2D_SceneBegin(renderTarget);

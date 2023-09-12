@@ -66,6 +66,7 @@ void Sprite::setCenter(float x, float y){
 }
 
 void Sprite::render(){
+    if(!visible) return;
     C2D_SpriteSetPos(&c2dSprite,posX,posY);
     C2D_SpriteSetScale(&c2dSprite,scaleX,scaleY);
     C2D_SpriteSetRotation(&c2dSprite,rotationRad);
