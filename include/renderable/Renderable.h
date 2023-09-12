@@ -9,6 +9,8 @@ class Renderable {
         Renderable() = default;
         virtual ~Renderable() = default;
 
+        bool visible = true;
+
         /** Renders the renderable object. */
         virtual void render() = 0;
 };
