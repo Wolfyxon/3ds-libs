@@ -3,7 +3,6 @@
 gfxScreen_t screen;
 Console::Console(gfxScreen_t screen_){
     screen = screen_;
-    consoleInit(screen, &printConsole);
 }
 
 Console::~Console(){
@@ -63,6 +62,10 @@ void Console::render(){
     if(!visible) return;
     
     consoleSelect(&printConsole);
+    if(!initialized){
+        initialized = true;
+        consoleInit(screen, &printConsole); //this has to be called once. Also, do not put it in the constructor or Scene will not render.
+    }
     //consoleClear();
     
     for(int i = 0; i<(int)output.size(); i++){

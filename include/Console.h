@@ -36,6 +36,7 @@ class Console : public Renderable, public TreeElement {
 private:
     vector<string> output;
     PrintConsole printConsole;
+    bool initialized = false;
 public:
     gfxScreen_t screen;
 
