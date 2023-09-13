@@ -36,7 +36,7 @@ void Scene::render(){
                 Sprite *rend = (Sprite*)desc;
                 rend->render();
            }
-           if(instanceof(desc,"Console")){
+           else if(instanceof(desc,"Console")){
                 Console *rend = (Console*)desc;
                 rend->render();
            }
