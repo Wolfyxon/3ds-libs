@@ -61,7 +61,7 @@ int Console::getColumns(){
 void Console::render(){
     if(!visible) return;
     consoleInit(screen, &printConsole);
-    //consoleSelect(&printConsole);
+    consoleSelect(&printConsole);
     //consoleClear();
     
     for(int i = 0; i<(int)output.size(); i++){
