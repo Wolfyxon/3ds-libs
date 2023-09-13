@@ -47,6 +47,7 @@ public:
     ~Console();
 
     virtual string* getExtended();
+    virtual string getType(){ return "Console" };
 
     /** Prints line of text.
     * @param text The text you want to print. ANSI codes are supported.
