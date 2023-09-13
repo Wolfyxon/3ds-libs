@@ -1,16 +1,37 @@
 # 3ds-libs
-Multi purpose C++ library for easier Homebrew development on the Nintendo 3DS
-## Features
-Complete:
-- Better console with automatic text positioning and many formatting functions
-- Image rendering
+Multi purpose C++ library for easier Homebrew development on the Nintendo 3DS [Work in progress]
 
-In progress:
-- Easy UI system with tree structure
+## Example
+```cpp
+#include <3ds.h> // import the necessary DevkitARM 3DS Homebrew library
+#include "3ds-libs/include/Console.h"// import Console from 3ds-libs
 
-TODO:
-- Easy audio playing
+int main(int argc, char **argv) {
+    gfxInitDefault(); // initialize graphics
 
+    Console *console = new Console(GFX_TOP);// create a console on the top screen
+    console->print("Hello World!");
+    Console->print("Automatic new line :D");
+
+    //main loop
+    while (aptMainLoop()) {
+        hidScanInput();
+        u32 kDown = hidKeysDown();
+        u32 kHeld = keysHeld();
+        if (kDown & KEY_START) {
+            console->print("See you later");
+            break;// stop the main loop
+        }
+
+        gfxFlushBuffers();
+        console->render();// render the console
+        gspWaitForVBlank();
+    }
+    // program exits
+    gfxExit(); // unitialize graphics
+    return 0;
+}
+```
 ## Installing
 ### Uncompiled library method
 Assuming you are using the [DevkitPro app template Makefile](https://github.com/devkitPro/3ds-examples/blob/master/templates/application/Makefile) or a similar Makefile and file structure, and **3ds-libs** is not compiled, follow these steps.
