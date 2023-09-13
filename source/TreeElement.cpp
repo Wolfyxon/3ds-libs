@@ -98,7 +98,7 @@ bool TreeElement::hasChild(TreeElement *child){
 TreeElement *TreeElement::getChildByName(string name_){
     for(size_t i=0;i<children.size();i++){
         TreeElement *ch = children[i];
-        if(ch->name.compare(name_)) return ch;
+        if(ch->name == name_) return ch;
     }
     return NULL;
 }
@@ -129,7 +129,7 @@ vector<TreeElement *> TreeElement::rmNotMatchingType(vector<TreeElement *> eleme
     vector<TreeElement *> res;
     for(TreeElement *el : elements){
         if(
-            (strict && el->getType().compare(type)) ||
+            (strict && el->getType() == type) ||
             (!strict && instanceof(el, type))
         ) res.push_back(el);
     }
