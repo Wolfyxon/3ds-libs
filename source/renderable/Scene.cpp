@@ -1,5 +1,6 @@
 #include "../../include/renderable/Scene.h"
 #include "../../include/renderable/Sprite.h"
+#include "../../include/Console.h"
 
 Scene::Scene(gfxScreen_t screen, u32 backgroundColor_){
     name = "Scene";
@@ -33,6 +34,10 @@ void Scene::render(){
            // TODO: Find a way to make this universal instead of making every combination.
            if(instanceof(desc,"Sprite")){
                 Sprite *rend = (Sprite*)desc;
+                rend->render();
+           }
+           if(instanceof(desc,"Console")){
+                Console *rend = (Console*)desc;
                 rend->render();
            }
         }
