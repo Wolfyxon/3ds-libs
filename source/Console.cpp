@@ -3,6 +3,7 @@
 gfxScreen_t screen;
 Console::Console(gfxScreen_t screen_){
     screen = screen_;
+    consoleInit(screen, &printConsole);
 }
 
 Console::~Console(){
@@ -60,7 +61,7 @@ int Console::getColumns(){
 
 void Console::render(){
     if(!visible) return;
-    consoleInit(screen, &printConsole);
+    
     consoleSelect(&printConsole);
     //consoleClear();
     
