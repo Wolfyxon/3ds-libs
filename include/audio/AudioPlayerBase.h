@@ -9,4 +9,9 @@ class AudioPlayerBase : public Classified {
 
         /** Plays the audio */
         virtual void play() = 0;
+        /** 
+         * Loads audio from the specified file path.
+         * @param filePath Path to the audio file.
+         */
+        virtual bool load(string filePath) = 0;
 };
