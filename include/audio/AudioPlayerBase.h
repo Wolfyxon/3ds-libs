@@ -26,4 +26,12 @@ class AudioPlayerBase : public Classified {
          * @param filePath Path to the audio file.
          */
         virtual AudioResult load(string filePath) = 0;
+    private:
+    	float rate;
+        char* data;
+        ndspInterpType interp;
+	    u32 channels;
+	    u32 encoding;
+	    u32 samples;
+	    u32 size;
 };
