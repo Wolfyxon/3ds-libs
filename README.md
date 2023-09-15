@@ -61,7 +61,7 @@ SOURCES		 :=	source $(3DS_LIBS_SRC) $(3DS_LIBS_SRC)/renderable
 
 Add
 ```
-include $(3DS_LIBS_INC) $(3DS_LIBS_SRC)/renderable
+include $(3DS_LIBS_INC) $(3DS_LIBS_INC)/renderable
 ```
 To include the necessary .H files for compilation. Example setup:
 ```make
