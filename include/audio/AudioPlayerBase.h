@@ -38,4 +38,6 @@ class AudioPlayerBase : public Classified {
 	    u32 channels;
 	    u32 samples;
 	    u32 size;
+    protected:
+        static int occupiedChannels;
 };
