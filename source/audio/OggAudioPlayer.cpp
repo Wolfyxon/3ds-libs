@@ -8,7 +8,10 @@ AudioResult OggAudioPlayer::load(char* filePath){
     FILE * file = fopen(filePath, "rb");
 
     if(file == 0) return AudioResult::file_not_found;
-    if(ov_open(file, &ovf, NULL, 0) < 0) return AudioResult::codec_error;
+    if(ov_open(file, &ovf, NULL, 0) < 0){
+        fclose(file);
+        return AudioResult::codec_error;
+    }
 
     vorbis_info * info = ov_info(&ovf, -1);
     if(info == NULL) return AudioResult::no_info;
@@ -18,7 +21,11 @@ AudioResult OggAudioPlayer::load(char* filePath){
     samples = (u32)ov_pcm_total(&ovf, -1);
     size = samples * channels * 2;
 
-    if(linearSpaceFree() < size) return AudioResult::not_enough_memory;
+    if(linearSpaceFree() < size){
+        ov_clear(&ovf);
+        fclose(file);
+        return AudioResult::not_enough_memory;
+    }
 
     data = (char*)linearAlloc(size);
     if(data == 0) return AudioResult::stream_no_data;
