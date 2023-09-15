@@ -32,6 +32,13 @@ enum Ansi_code {
     strikethrough = 9,
 };
 
+enum Wrap_mode {
+    trim_characters,
+    trim_words,
+    wrap_characters,
+    wrap_words,
+};
+
 class Console : public Renderable, public TreeElement {
 private:
     vector<string> output;
