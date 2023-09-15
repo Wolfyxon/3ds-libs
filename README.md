@@ -67,8 +67,15 @@ To include the necessary .H files for compilation. Example setup:
 ```make
 INCLUDES	 :=	include $(3DS_LIBS_INC) $(3DS_LIBS_INC)/renderable
 ```
+7. Modify the `LIBS` variable
 
-7. Enjoy! Now you can use the `#include` statement to import the headers you need for your code. Example:
+Add `-lvorbisidec -logg` at the end of it. **The order must be exactly the same**. Example setup:
+```make
+LIBS	:= -lcitro2d -lcitro3d -lctru -lm -lvorbisidec -logg
+```
+This will include the OGG libraries necessary for playing OGG audio
+
+8. Enjoy! Now you can use the `#include` statement to import the headers you need for your code. Example:
 ```cpp
 #include "3ds-libs/include/Console.h"
 ```
