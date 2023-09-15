@@ -11,6 +11,8 @@ enum AudioResult {
 };
 
 class AudioPlayerBase : public Classified {
+    friend class OggAudioPlayer;
+    
     public:
         AudioPlayerBase() = default;
         virtual ~AudioPlayerBase() = default;
