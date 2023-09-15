@@ -24,7 +24,7 @@ class AudioPlayerBase : public Classified {
         bool loop = false;
 
         /** Plays the audio */
-        virtual void play() = 0;
+        virtual void play();
         /** 
          * Loads audio from the specified file path.
          * @param filePath Path to the audio file.

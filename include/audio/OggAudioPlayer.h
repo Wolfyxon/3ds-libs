@@ -13,8 +13,6 @@ class OggAudioPlayer : public AudioPlayerBase {
 
         OggVorbis_File ovf;
 
-        /** Plays the audio */
-        virtual void play();
         /** 
         * Loads OGG vorbis audio from the specified file path.
         * @param filePath Path to the .ogg audio file.
