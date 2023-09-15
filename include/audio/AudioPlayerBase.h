@@ -9,6 +9,7 @@ enum AudioResult {
     codec_error,
     no_info,
     stream_no_data,
+    stream_error,
 };
 
 class AudioPlayerBase : public Classified {
