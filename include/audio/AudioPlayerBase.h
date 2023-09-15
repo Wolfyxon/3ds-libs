@@ -7,6 +7,7 @@ enum AudioResult {
     file_not_found,
     not_enough_memory,
     codec_error,
+    no_info,
     stream_no_data,
 };
 
