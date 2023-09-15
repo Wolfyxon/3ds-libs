@@ -8,7 +8,7 @@
 class OggAudioPlayer : public AudioPlayerBase {
     public:
         OggAudioPlayer(char* filePath);
-        OggAudioPlayer();
+        OggAudioPlayer() = default;
         virtual ~OggAudioPlayer() = default;
 
         OggVorbis_File ovf;
