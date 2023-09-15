@@ -2,6 +2,14 @@
 #include "../Classified.h"
 #include "../debug.h"
 
+enum AudioResult {
+    success,
+    file_not_found,
+    not_enough_memory,
+    codec_error,
+    stream_no_data,
+};
+
 class AudioPlayerBase : public Classified {
     public:
         AudioPlayerBase() = default;
