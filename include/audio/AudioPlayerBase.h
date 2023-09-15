@@ -12,7 +12,7 @@ enum AudioResult {
 
 class AudioPlayerBase : public Classified {
     friend class OggAudioPlayer;
-    
+
     public:
         AudioPlayerBase() = default;
         virtual ~AudioPlayerBase() = default;
@@ -31,9 +31,9 @@ class AudioPlayerBase : public Classified {
     private:
     	float rate;
         char* data;
-        ndspInterpType interp;
+        ndspInterpType interp = NDSP_INTERP_NONE;
+        u32 encoding = NDSP_ENCODING_PCM16;
 	    u32 channels;
-	    u32 encoding;
 	    u32 samples;
 	    u32 size;
 };
