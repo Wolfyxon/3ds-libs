@@ -15,3 +15,7 @@ void AudioPlayerBase::unload(){
     linearFree(waveBuf);
     linearFree(data);
 }
+
+bool AudioPlayerBase::isLoaded(){
+    return loaded;
+}
