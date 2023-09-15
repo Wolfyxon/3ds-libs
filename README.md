@@ -1,6 +1,12 @@
 # 3ds-libs
 Multi purpose C++ library for easier Homebrew development on the Nintendo 3DS [Work in progress]
 
+## Features
+- Easy sprite rendering
+- Scene system with tree structure
+- Easy audio playing. Supported formats: `OGG`
+- Text console with automatic newline and scrolling 
+
 ## Example
 ```cpp
 #include <3ds.h> // import the necessary DevkitARM 3DS Homebrew library
@@ -32,7 +38,17 @@ int main(int argc, char **argv) {
     return 0;
 }
 ```
-## Installing
+## Dependencies
+First install [everything needed for DevkitPRO and set up your environment](https://www.3dbrew.org/wiki/Setting_up_Development_Environment) if you haven't yet.  
+Then install these packages:
+- 3ds-libogg
+- 3ds-libvorbisidec
+```
+pacman -S 3ds-libogg 3ds-libvorbisidec
+```
+
+## Installing the library
+Please first follow the **Dependencies** section.
 ### Uncompiled library method
 Assuming you are using the [DevkitPro app template Makefile](https://github.com/devkitPro/3ds-examples/blob/master/templates/application/Makefile) or a similar Makefile and file structure, and **3ds-libs** is not compiled, follow these steps.
 1. `cd source` to go to your directory with your CPP files.
