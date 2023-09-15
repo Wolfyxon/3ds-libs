@@ -32,6 +32,8 @@ class AudioPlayerBase : public Classified {
         virtual AudioResult load(char* filePath) = 0;
         /** Unloads the loaded audio file. */
         virtual void unload();
+        /** Stops the audio. */
+        void stop();
         /** Checks if an audio file is loaded. */
         bool isLoaded();
         /** Checks if the audio is playing. */
