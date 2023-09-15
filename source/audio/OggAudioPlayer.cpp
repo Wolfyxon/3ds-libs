@@ -47,6 +47,6 @@ AudioResult OggAudioPlayer::load(char* filePath){
 
     ov_clear(&ovf);
     fclose(file);
-
+    loaded = true;
     return AudioResult::success;
 }
