@@ -24,5 +24,5 @@ class AudioPlayerBase : public Classified {
          * Loads audio from the specified file path.
          * @param filePath Path to the audio file.
          */
-        virtual bool load(string filePath) = 0;
+        virtual AudioResult load(string filePath) = 0;
 };
