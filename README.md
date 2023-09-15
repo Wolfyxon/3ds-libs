@@ -65,7 +65,7 @@ include $(3DS_LIBS_INC) $(3DS_LIBS_SRC)/renderable
 ```
 To include the necessary .H files for compilation. Example setup:
 ```make
-INCLUDES	 :=	include $(3DS_LIBS_INC) $(3DS_LIBS_SRC)/renderable
+INCLUDES	 :=	include $(3DS_LIBS_INC) $(3DS_LIBS_INC)/renderable
 ```
 
 7. Enjoy! Now you can use the `#include` statement to import the headers you need for your code. Example:
