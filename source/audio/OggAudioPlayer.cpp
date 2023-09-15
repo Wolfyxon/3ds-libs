@@ -1,5 +1,9 @@
 #include "../../include/audio/OggAudioPlayer.h"
 
+OggAudioPlayer::OggAudioPlayer(char* filePath){
+    load(filePath);
+}
+
 AudioResult OggAudioPlayer::load(char* filePath){
     FILE * file = fopen(filePath, "rb");
 
