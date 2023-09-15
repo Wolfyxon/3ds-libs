@@ -19,3 +19,7 @@ void AudioPlayerBase::unload(){
 bool AudioPlayerBase::isLoaded(){
     return loaded;
 }
+
+bool AudioPlayerBase::isPlaying(){
+    return ndspChnIsPlaying(channel);
+}

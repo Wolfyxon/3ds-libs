@@ -34,6 +34,8 @@ class AudioPlayerBase : public Classified {
         virtual void unload();
         /** Checks if an audio file is loaded. */
         bool isLoaded();
+        /** Checks if the audio is playing. */
+        bool isPlaying();
     private:
         bool loaded = false;
 
