@@ -8,6 +8,7 @@ class AudioPlayerBase : public Classified {
         virtual ~AudioPlayerBase() = default;
 
         int channel = 0;
+        bool loop = false;
 
         /** Plays the audio */
         virtual void play() = 0;
