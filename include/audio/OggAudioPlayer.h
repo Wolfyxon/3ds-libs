@@ -15,5 +15,5 @@ class OggAudioPlayer : public AudioPlayerBase {
         * Loads OGG vorbis audio from the specified file path.
         * @param filePath Path to the .ogg audio file.
         */
-        virtual AudioResult load(string filePath) = 0;
+        virtual AudioResult load(char* filePath) = 0;
 };
