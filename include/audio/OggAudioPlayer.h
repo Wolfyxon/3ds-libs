@@ -6,6 +6,8 @@ class OggAudioPlayer : public AudioPlayerBase {
     OggAudioPlayer() = default;
     virtual ~OggAudioPlayer() = default;
     
+    OggVorbis_File ovf;
+
     /** Plays the audio */
     virtual void play() = 0;
     /** 
