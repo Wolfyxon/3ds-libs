@@ -30,7 +30,11 @@ class AudioPlayerBase : public Classified {
          * @param filePath Path to the audio file.
          */
         virtual AudioResult load(char* filePath) = 0;
+        /** Unloads the loaded audio file. */
+        virtual void unload();
     private:
+        bool loaded = false;
+
     	float rate;
         char* data;
         ndspInterpType interp = NDSP_INTERP_NONE;

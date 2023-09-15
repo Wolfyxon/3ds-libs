@@ -9,3 +9,9 @@ void AudioPlayerBase::play(){
     ndspChnSetFormat(channel, NDSP_CHANNELS(channels) | NDSP_ENCODING(encoding));
     ndspChnWaveBufAdd(channel, &waveBuf[0]);
 }
+
+void AudioPlayerBase::unload(){
+    loaded = false;
+    linearFree(waveBuf);
+    linearFree(data);
+}
