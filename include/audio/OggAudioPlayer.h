@@ -2,6 +2,9 @@
 #include <ogg/ogg.h>
 #include <tremor/ivorbisfile.h>
 
+#define AUDIO_BUFFER_SIZE 4096
+#define STACKSIZE (4 * 1024)
+
 class OggAudioPlayer : public AudioPlayerBase {
     public:
         OggAudioPlayer() = default;
