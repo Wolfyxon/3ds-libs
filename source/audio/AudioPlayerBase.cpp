@@ -1,5 +1,9 @@
 #include "../../include/audio/AudioPlayerBase.h"
 
+AudioPlayerBase::~AudioPlayerBase(){
+    unload();
+}
+
 void AudioPlayerBase::play(){
     stop();
     ndspChnInitParams(channel);
