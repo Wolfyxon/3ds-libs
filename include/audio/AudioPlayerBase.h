@@ -17,7 +17,7 @@ class AudioPlayerBase : public Classified {
 
     public:
         AudioPlayerBase() = default;
-        virtual ~AudioPlayerBase() = default;
+        virtual ~AudioPlayerBase();
 
         ndspWaveBuf waveBuf[1];
         int channel = 0;
