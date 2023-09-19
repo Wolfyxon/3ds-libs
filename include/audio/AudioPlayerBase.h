@@ -54,6 +54,8 @@ class AudioPlayerBase : public Classified {
 	    u32 channels;
 	    u32 samples;
 	    u32 size;
+
+        static void waitForEnd(void* arg);
     protected:
         static int occupiedChannels;
 };

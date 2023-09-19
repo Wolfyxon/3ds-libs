@@ -17,6 +17,12 @@ void AudioPlayerBase::play(){
     ndspChnSetRate(channel, rate*speed);
     ndspChnSetFormat(channel, NDSP_CHANNELS(channels) | NDSP_ENCODING(encoding));
     ndspChnWaveBufAdd(channel, &waveBuf[0]);
+
+    s32 pr = 0;
+    size_t stackSize = 4 * 1024;
+	svcGetThreadPriority(&pr, CUR_THREAD_HANDLE);
+    threadCreate(waitForEnd,(void*)this, stackSize, pr-1, -2, true);
+
 }
 
 void AudioPlayerBase::stop(){
@@ -36,4 +42,10 @@ bool AudioPlayerBase::isLoaded(){
 
 bool AudioPlayerBase::isPlaying(){
     return ndspChnIsPlaying(channel);
+}
+
+void AudioPlayerBase::waitForEnd(void* arg){
+    AudioPlayerBase *player = (AudioPlayerBase*)arg;
+    while (aptMainLoop() && player->isPlaying());
+    
 }
