@@ -47,5 +47,5 @@ bool AudioPlayerBase::isPlaying(){
 void AudioPlayerBase::waitForEnd(void* arg){
     AudioPlayerBase *player = (AudioPlayerBase*)arg;
     while (aptMainLoop() && player->isPlaying());
-    
+    svcSignalEvent(player->ended);
 }
