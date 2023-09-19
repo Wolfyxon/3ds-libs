@@ -38,9 +38,15 @@ class AudioPlayerBase : public Classified {
         bool isLoaded();
         /** Checks if the audio is playing. */
         bool isPlaying();
+        /** 
+         * Sets audio playback speed. 
+         * @param speed_ The speed you want to set. 1 is default */
+        void setSpeed(float speed_);
+        /** Returns the audio playback speed. */
+        float getSpeed(){return speed;}
     private:
         bool loaded = false;
-
+        float speed = 1;
     	float rate;
         char* data;
         ndspInterpType interp = NDSP_INTERP_NONE;

@@ -4,11 +4,17 @@ AudioPlayerBase::~AudioPlayerBase(){
     unload();
 }
 
+void AudioPlayerBase::setSpeed(float speed_){
+    speed = speed_;
+    if(!loaded) return;
+    ndspChnSetRate(channel, rate*speed);
+}
+
 void AudioPlayerBase::play(){
     stop();
     ndspChnInitParams(channel);
     ndspChnSetInterp(channel,interp);
-    ndspChnSetRate(channel, rate);
+    ndspChnSetRate(channel, rate*speed);
     ndspChnSetFormat(channel, NDSP_CHANNELS(channels) | NDSP_ENCODING(encoding));
     ndspChnWaveBufAdd(channel, &waveBuf[0]);
 }
