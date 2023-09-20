@@ -14,9 +14,11 @@ AudioResult OggAudioPlayer::load(char* filePath){
     }
 
     vorbis_info * info = ov_info(&ovf, -1);
-    if(info == NULL) return AudioResult::no_info;
+    if(info == NULL){
+        fclose(file);
+        return AudioResult::no_info;
+    }
 
-    rate = (float)info->rate;
     channels = (u32)info->channels;
     samples = (u32)ov_pcm_total(&ovf, -1);
     size = samples * channels * 2;
@@ -27,6 +29,7 @@ AudioResult OggAudioPlayer::load(char* filePath){
         return AudioResult::not_enough_memory;
     }
 
+    rate = (float)info->rate;
     data = (char*)linearAlloc(size);
     if(data == 0) return AudioResult::stream_no_data;
 
